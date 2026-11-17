@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10131d">
+<title>OMT Live — Creative Learning Rooms</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 20% -20%,#23384b 0,transparent 45%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid #40516a;border-radius:12px;background:#243246;color:var(--text);padding:10px 14px;transition:.18s}button:hover{background:#30445e;border-color:#6983a5}button.primary{background:var(--mint);border-color:var(--mint);color:#102019;font-weight:750}button.ghost{background:transparent}button:disabled{opacity:.45;cursor:not-allowed}input,select,textarea{background:#0e1520;border:1px solid #354457;border-radius:10px;color:var(--text);padding:10px 12px;width:100%;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--mint);box-shadow:0 0 0 3px #9de3c322}textarea{resize:vertical;min-height:90px}label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.shell{max-width:1440px;margin:auto;padding:22px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:12px}.mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#a2e7c8,#9db9f4);color:#14231f;display:grid;place-items:center;font-weight:900;letter-spacing:-2px}.brand h1{font-size:17px;margin:0;letter-spacing:.04em}.brand p{margin:1px 0 0;color:var(--muted);font-size:12px}.topright{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.statuspill{font-size:11px;border:1px solid var(--line);border-radius:99px;padding:5px 9px;color:var(--muted)}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:18px}.side,.card{background:linear-gradient(180deg,#182230,#131a25);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.side{padding:12px;height:max-content;position:sticky;top:16px}.navbtn{width:100%;text-align:left;background:transparent;border-color:transparent;color:#b6c4d0;margin:2px 0}.navbtn.active{background:#293a4b;color:var(--mint);border-color:#3b5364}.navgroup{margin:14px 8px 5px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#708293}.sidefoot{border-top:1px solid var(--line);margin-top:14px;padding:14px 8px 4px;color:var(--muted);font-size:11px}.main{min-width:0}.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin:4px 0 18px}.eyebrow{color:var(--mint);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800}.hero h2{font-size:clamp(25px,4vw,36px);letter-spacing:-.04em;line-height:1.1;margin:7px 0}.hero p{max-width:720px;color:var(--muted);margin:0}.heroTag{border:1px solid #42536a;border-radius:14px;padding:10px 12px;color:#b8c9d5;font-size:12px;white-space:nowrap}.grid2{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.85fr);gap:16px}.card{padding:18px;margin-bottom:16px}.card h3{margin:0 0 8px;font-size:16px}.muted{color:var(--muted)}.small{font-size:12px}.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.between{justify-content:space-between}.field{margin:10px 0}.fieldrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.meeting{background:#080c12;border:1px solid #344254;border-radius:15px;min-height:370px;overflow:hidden;position:relative}.meeting.empty{display:grid;place-items:center;padding:24px;text-align:center}.meeting.empty .inner{max-width:420px}.meeting iframe{width:100%;height:480px;border:0;display:block}.meetingTop{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}.step{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid #293645}.step:last-child{border:0}.stepnum{width:25px;height:25px;flex:0 0 25px;border-radius:9px;background:#263849;color:var(--mint);display:grid;place-items:center;font-size:12px;font-weight:800}.step strong{display:block;font-size:13px}.step p{margin:2px 0 0;color:var(--muted);font-size:12px}.prompt{font-size:18px;line-height:1.35;color:#edf5f2;margin:10px 0 14px}.tag{display:inline-block;border:1px solid #3a4c5c;border-radius:99px;padding:4px 8px;font-size:10px;color:var(--muted);margin:2px}.timer{font-variant-numeric:tabular-nums;font-size:27px;font-weight:750;letter-spacing:.03em}.micmeter{height:9px;background:#0b1119;border-radius:99px;overflow:hidden;border:1px solid #334457}.micmeter span{height:100%;width:0;display:block;background:linear-gradient(90deg,#8bdab8,#e8d28d,#e89a9a);transition:width .08s}.notice{border:1px solid #695b3c;background:#282419;color:#e6d3a5;border-radius:12px;padding:11px 12px;font-size:12px}.good{border-color:#345b4b;background:#14251f;color:#b9e9d0}.bad{border-color:#684349;background:#291b20;color:#f0b7bd}.videoBox{background:#080c12;border:1px solid #354457;border-radius:14px;min-height:210px;display:grid;place-items:center;overflow:hidden}.videoBox video{width:100%;max-height:360px;background:#000}.pilltabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.pilltabs button{font-size:12px;padding:7px 11px;border-radius:99px}.pilltabs button.active{border-color:var(--mint);color:var(--mint);background:#20362f}.journalitem{border:1px solid var(--line);border-radius:12px;padding:12px;margin:8px 0}.journalitem strong{font-size:13px}.journalitem p{margin:4px 0 0;color:var(--muted);font-size:12px}.hidden{display:none!important}.footer{color:#718292;font-size:11px;text-align:center;padding:14px}.callout{padding:12px;border-radius:12px;background:#1d2b38;border:1px solid #34495c;color:#bcd0dd;font-size:12px}.creativeGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.miniCard{border:1px solid var(--line);border-radius:14px;padding:13px;background:#121b27}.miniCard h4{margin:0 0 5px}.xp{color:var(--gold);font-weight:800}.scoregrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.score{background:#111b27;border:1px solid #304253;border-radius:11px;padding:9px}.score b{display:block;font-size:17px}.score span{font-size:10px;color:var(--muted)}
+@media(max-width:980px){.layout{grid-template-columns:1fr}.side{position:static;display:flex;gap:5px;overflow:auto}.navgroup,.sidefoot{display:none}.navbtn{white-space:nowrap;width:auto}.grid2{grid-template-columns:1fr}.meeting iframe{height:390px}}
+@media(max-width:620px){.shell{padding:12px}.top{align-items:flex-start}.topright .statuspill{display:none}.hero{display:block}.heroTag{display:inline-block;margin-top:12px}.card{padding:14px}.fieldrow,.creativeGrid{grid-template-columns:1fr}.meeting{min-height:300px}.meeting iframe{height:340px}.scoregrid{grid-template-columns:repeat(2,1fr)}}
+/* ===== v0.2 additions ===== */
+.hdrnav{display:flex;gap:4px;flex-wrap:wrap}.hdrnav button{padding:7px 11px;font-size:13px}
+.pill{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:5px 10px;color:var(--muted);background:transparent;cursor:pointer}.pill.pts{color:var(--gold);border-color:#5a4d2c}
+.catgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}.cat{border:1px solid var(--line);border-radius:16px;padding:14px;background:linear-gradient(180deg,#182230,#121923)}.cat .em{font-size:28px}.cat h4{margin:6px 0 4px;font-size:15px}.cat p{margin:0 0 10px;color:var(--muted);font-size:12px;min-height:34px}
+.modalback{position:fixed;inset:0;background:#000a;z-index:50;display:flex;align-items:flex-start;justify-content:center;padding:4vh 12px;overflow:auto}.modal{background:#141c29;border:1px solid #3a4c66;border-radius:18px;padding:18px;max-width:560px;width:100%;box-shadow:var(--shadow)}.modal h3{margin-top:0}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.chip{border:1px solid #3a4c5c;border-radius:99px;padding:5px 10px;font-size:13px;background:#101a26;color:var(--text);cursor:pointer}.chip:hover{border-color:var(--mint)}.chip.on{border-color:var(--mint);background:#20362f;color:var(--mint)}
+.roomhead{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.roomgrid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(320px,1fr);gap:14px;align-items:start}.roomgrid.solo{grid-template-columns:1fr}
+#meeting{height:min(72vh,660px);min-height:360px}#meeting iframe{height:100%}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:10px}.tabs button{padding:7px 11px;font-size:13px;border-radius:99px}.tabs button.active{border-color:var(--mint);color:var(--mint);background:#20362f}
+.dock{background:linear-gradient(180deg,#182230,#131a25);border:1px solid var(--line);border-radius:18px;padding:14px;min-height:300px}
+.mobseg{display:none;gap:6px;margin-bottom:10px}.mobseg button{flex:1}.mobseg button.active{border-color:var(--mint);color:var(--mint);background:#20362f}
+.bigprompt{font-size:clamp(22px,4vw,34px);line-height:1.2;font-weight:750;letter-spacing:-.02em;margin:8px 0;overflow-wrap:anywhere}
+.ringwrap{display:flex;align-items:center;gap:12px}.ring{width:84px;height:84px}.ring text{fill:var(--text);font-size:22px;font-weight:750;font-variant-numeric:tabular-nums}
+.vis{width:100%;max-width:520px;aspect-ratio:4/3;border-radius:14px;border:1px solid #3a4c5c;display:block}
+.sides{display:grid;grid-template-columns:1fr 1fr;gap:8px}.side2{border:1px solid var(--line);border-radius:12px;padding:10px;background:#111b27}
+.peer{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:12px;margin:6px 0;flex-wrap:wrap}.peer .av{font-size:22px}.peer.speaking{border-color:var(--mint);box-shadow:0 0 0 2px #9de3c333}.peer .grow{flex:1;min-width:120px}.badge{font-size:10px;border:1px solid #4b6178;border-radius:99px;padding:1px 7px;color:var(--muted);margin-left:4px}.badge.host{color:var(--gold);border-color:#6a5a30}
+.peer button{padding:4px 8px;font-size:12px}
+.verseline{display:grid;grid-template-columns:22px 1fr auto auto;gap:6px;align-items:center;margin:5px 0}.verseline input{padding:7px 9px}.verseline .n{color:var(--muted);font-size:12px;text-align:center}.verseline .by{font-size:10px;color:var(--muted)}
+.verseline.now input{border-color:var(--gold);box-shadow:0 0 0 2px #e6c78c33}.rd{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:middle}
+.barsep{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#708293;margin:10px 0 2px}
+.recbanner{position:fixed;top:0;left:0;right:0;z-index:60;background:#a3262a;color:#fff;padding:9px 14px;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;font-weight:650}.recbanner button{background:#fff;color:#a3262a;border:0;padding:5px 10px;border-radius:8px}
+.float{position:fixed;bottom:80px;z-index:70;font-size:34px;pointer-events:none;animation:fl 2.2s ease-out forwards;text-align:center}.float small{display:block;font-size:11px;color:#fff;text-shadow:0 1px 3px #000}@keyframes fl{from{transform:translateY(0);opacity:1}to{transform:translateY(-240px);opacity:0}}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:80;background:#1d6b4a;color:#fff;padding:10px 16px;border-radius:12px;max-width:92vw;box-shadow:var(--shadow)}.toast.err{background:#8a2c2c}
+.take{border:1px solid var(--line);border-radius:12px;padding:10px;margin:8px 0;background:#111b27}.take audio{width:100%;margin-top:6px}
+.ach{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}.achc{border:1px solid var(--line);border-radius:14px;padding:12px;background:#111b27;opacity:.45}.achc.got{opacity:1;border-color:#5a4d2c}.achc .em{font-size:26px}
+.reacts{display:flex;gap:4px;flex-wrap:wrap}.reacts button{padding:5px 9px;font-size:18px;border-radius:99px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kv{font-size:12px;color:var(--muted)}.kv b{color:var(--text)}
+details.adv summary{cursor:pointer;color:var(--muted);font-size:12px;margin:8px 0}
+@media(max-width:900px){.roomgrid{grid-template-columns:1fr}.mobseg{display:flex}.roomgrid[data-view="video"] .dock{display:none}.roomgrid[data-view="act"] #videoCol{display:none}#meeting{height:min(60vh,520px)}.sides,.grid3{grid-template-columns:1fr}.layout{grid-template-columns:1fr}}
+@media(max-width:620px){.hdrnav button{padding:6px 8px;font-size:12px}.verseline{grid-template-columns:18px 1fr auto}.verseline .acts{grid-column:1/-1;justify-self:end}.modal{padding:14px}}
+</style>
+</head>
+<body>
+<div id="recbanner" class="recbanner hidden" role="alert"></div>
+<div class="shell">
+<header class="top">
+  <div class="brand"><div class="mark">OMT</div><div><h1>OMT LIVE</h1><p>Creative learning rooms · v0.2</p></div></div>
+  <nav class="hdrnav" aria-label="Main navigation">
+    <button class="navbtn active" data-page="home">🏠 Home</button>
+    <button class="navbtn" data-page="room">◉ Room</button>
+    <button class="navbtn" data-page="pronounz">▤ Pronounz Lab</button>
+    <button class="navbtn" data-page="pov">◌ POV Talks</button>
+    <button class="navbtn" data-page="creative">✧ Creative Labs</button>
+    <button class="navbtn" data-page="journal">▧ Journal</button>
+    <button class="navbtn" data-page="progress">🏅 Progress</button>
+    <button class="navbtn" data-page="profile">🙂 Profile</button>
+  </nav>
+  <div class="topright"><span class="pill pts" id="xpBadge">✦ 0 Points</span></div>
+</header>
+<main class="main">
+
+<section id="page-home" class="page">
+  <div class="hero"><div><div class="eyebrow">Choose how you want to jam</div><h2>Pick a session. Share a link. Start creating.</h2><p>OMT is a place to talk, rap, write, debate and practise out loud with other people. Host a room in one tap, or join one with a link or code.</p></div><div class="heroTag">JAM · PRACTISE · CREATE</div></div>
+  <div id="joinbanner" class="card hidden"></div>
+  <div class="grid2">
+    <div class="card"><h3>Join a session</h3><p class="small muted">Paste an invite link or a room code you were given.</p><div class="row"><input id="joinInput" placeholder="https://…#j=…  or  OMT-ABCD-1234" style="flex:1;min-width:200px"><button class="primary" id="joinBtn">Join</button></div><div id="joinMsg" class="small muted" style="margin-top:8px"></div></div>
+    <div class="card"><h3>Practise on your own</h3><p class="small muted">Use the prompt engine, rap studio and recorder without video. Nothing is shared.</p><button id="soloBtn" class="primary">Start solo practice</button></div>
+  </div>
+  <div class="card"><div class="row between"><h3>Host a session — choose a class</h3><span class="tag">These are starting points, not rules</span></div><div class="catgrid" id="cats"></div></div>
+  <div class="card"><h3>Recent sessions</h3><div id="recent"><p class="muted small">Nothing yet.</p></div></div>
+  <div class="grid2"><div>   <div class="card"><h3>Microphone check</h3><p class="small muted">Test browser microphone access before entering a room. This checks the browser's local input, not whether the other participant can hear you.</p><div class="field"><label for="micSelect">Input device</label><select id="micSelect"><option value="">Default microphone</option></select></div><div class="row"><button id="micTest" class="primary">Test microphone</button><button id="micStop" class="ghost" disabled>Stop</button></div><div class="micmeter" style="margin:12px 0"><span id="micLevel"></span></div><div id="micStatus" class="callout">Microphone test hasn't run.</div></div></div><div>   <div class="card"><h3>Quick session timer</h3><div class="row between"><div class="timer" id="timerDisplay">45:00</div><div class="row"><button id="timerStart">Start</button><button id="timerReset" class="ghost">Reset</button></div></div><div class="small muted">A flexible timer for lessons, speaking rounds or creative challenges.</div></div><div class="callout">OMT has no accounts or servers yet. Your profile, points, verses and recordings live in this browser on this device. Video runs through Jitsi (a third-party service).</div></div></div>
+</section>
+
+<section id="page-room" class="page hidden">
+  <div id="roomEmpty" class="card"><h3>No session open</h3><p class="muted">Pick a class on Home to host one, join with a link, or practise on your own.</p><div class="row"><button class="primary" data-go="home">Go to Home</button><button id="soloBtn2">Start solo practice</button></div></div>
+  <div id="roomLive" class="hidden">
+    <div class="roomhead">
+      <div><div class="eyebrow" id="rhCat"></div><h2 style="margin:4px 0;font-size:24px" id="rhTitle"></h2><div class="small muted" id="rhMeta"></div></div>
+      <div class="row" id="rhActions"></div>
+    </div>
+    <div class="row" style="margin-bottom:10px"><div class="reacts" id="reacts"></div><span class="small muted" id="roomStatus"></span></div>
+    <div class="mobseg" id="mobseg"><button data-v="video" class="active">📹 Video</button><button data-v="act">✦ Activity</button></div>
+    <div class="roomgrid" id="roomgrid" data-view="video">
+      <div id="videoCol">
+        <div class="card" style="padding:12px">
+          <div id="prejoin"></div>
+          <div id="meeting" class="meeting empty hidden"></div>
+          <div class="row" id="vidctl" style="margin-top:10px"></div>
+        </div>
+      </div>
+      <div class="dock" id="dock">
+        <div class="tabs" id="tabs"></div>
+        <div id="tabbody"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="page-pronounz" class="page hidden">
+ <div class="hero"><div><div class="eyebrow">02 / Language in action</div><h2>Pronounz Speaking Lab</h2><p>Practice first, analyze second, then improve the answer and try again. Designed for IELTS speaking and real-world communication.</p></div><div class="heroTag">SPEAK → NOTICE → REFINE</div></div>
+ <div class="grid2"><div class="card"><div class="row between"><h3>Speaking prompt</h3><span class="tag">IELTS Part <span id="partNum">2</span></span></div><div class="pilltabs"><button class="active" data-part="1">Part 1</button><button data-part="2">Part 2</button><button data-part="3">Part 3</button></div><div class="prompt" id="ieltsPrompt">Describe a skill you learned that has been useful in your life.</div><p class="small muted" id="ieltsHint">You should say what the skill is, how you learned it, and explain why it has been useful.</p><div class="row"><button id="nextPrompt" class="primary">Next prompt</button><button id="speakTimer" class="ghost">Start 2-minute timer</button></div><div class="timer" id="speakTimerDisplay" style="margin-top:10px">02:00</div></div>
+ <div class="card"><h3>Answer reflection</h3><div class="field"><label for="answerNotes">Key ideas / transcript / notes</label><textarea id="answerNotes" placeholder="Capture the student's main answer or observations..."></textarea></div><div class="scoregrid"><div class="score"><b id="fluencyScore">—</b><span>Fluency</span></div><div class="score"><b id="lexisScore">—</b><span>Vocabulary</span></div><div class="score"><b id="grammarScore">—</b><span>Grammar</span></div><div class="score"><b id="pronScore">—</b><span>Pronunciation</span></div></div><p class="small muted">These are manual teaching notes, not an automated IELTS band score.</p><div class="row"><button id="rateAnswer">Add practice XP</button><button id="savePronounz" class="primary">Save reflection</button></div></div></div>
+</section>
+<section id="page-pov" class="page hidden">
+ <div class="hero"><div><div class="eyebrow">03 / Perspective & communication</div><h2>POV Talks</h2><p>Structured discussions that help people listen, formulate a position, challenge assumptions and express ideas with clarity.</p></div><div class="heroTag">LISTEN · THINK · RESPOND</div></div>
+ <div class="grid2"><div class="card"><div class="row between"><h3>Discussion card</h3><span class="tag">Perspective challenge</span></div><div class="prompt" id="povPrompt">Does technology make people more independent, or more dependent?</div><div class="row"><button id="nextPov" class="primary">Draw another question</button><button id="povRound" class="ghost">Start 60-second round</button></div><div class="timer" id="povTimer" style="margin-top:10px">01:00</div><div class="field"><label for="povPosition">Your position</label><textarea id="povPosition" placeholder="I think... because... However..."></textarea></div></div>
+ <div class="card"><h3>Conversation moves</h3><div class="miniCard"><h4>Clarify</h4><p class="small muted">What do you mean by...? Can you give an example?</p></div><div class="miniCard" style="margin-top:8px"><h4>Challenge</h4><p class="small muted">I see your point, but what about...?</p></div><div class="miniCard" style="margin-top:8px"><h4>Build</h4><p class="small muted">I'd add another perspective...</p></div><div class="row" style="margin-top:12px"><button id="savePov" class="primary">Save discussion</button><span class="xp">+ practice XP</span></div></div></div>
+</section>
+<section id="page-creative" class="page hidden">
+ <div class="hero"><div><div class="eyebrow">04 / Learn by observing and making</div><h2>Creative Labs</h2><p>Watch someone demonstrate a technique. Notice the choices behind it. Try the technique yourself. Then create something original with it.</p></div><div class="heroTag">WATCH → NOTICE → TRY → CREATE</div></div>
+ <div class="grid2"><div class="card"><h3>1 · Watch a reference</h3><p class="small muted">Use a video you own, have permission to use, or a local practice clip. This prototype does not download or copy third-party videos.</p><div class="field"><label for="referenceFile">Choose a local video</label><input id="referenceFile" type="file" accept="video/*"></div><div class="videoBox" id="referenceBox"><div class="muted small">Your reference video will appear here.</div></div><div class="field"><label for="referenceUrl">Or open a reference link in a new tab</label><input id="referenceUrl" type="url" placeholder="https://..."></div><button id="openReference" class="ghost">Open reference link</button></div>
+ <div class="card"><h3>2 · Notice the technique</h3><div class="field"><label for="skillLens">Skill focus</label><select id="skillLens"><option>Video storytelling</option><option>Camera framing & composition</option><option>Editing & pacing</option><option>Voice, delivery & presence</option><option>Language & pronunciation</option><option>Freestyle, rhythm & music</option><option>Teaching & demonstration</option><option>Other creative technique</option></select></div><div class="callout">Borrow the principle, not the whole performance: identify one technique to practice and one way to make it your own.</div><div class="field"><label for="noticeNotes">What did the creator do?</label><textarea id="noticeNotes" placeholder="Timing, framing, editing, word choice, rhythm, gesture, storytelling..."></textarea></div><div class="field"><label for="tryNotes">3 · Try it yourself</label><textarea id="tryNotes" placeholder="Which part will you practice? What will you change?"></textarea></div><div class="field"><label for="createNotes">4 · Create your own version</label><textarea id="createNotes" placeholder="Describe or link the result you made..."></textarea></div><div class="row"><button id="creativeXP" class="primary">Complete lab · +20 XP</button><button id="saveCreative" class="ghost">Save lab notes</button></div></div></div>
+ <div class="card"><div class="row between"><h3>Practice capture</h3><span class="tag">Local recording · optional</span></div><p class="small muted">Record your own attempt for private review. Nothing is uploaded. Ask permission before recording anyone else.</p><div class="videoBox" id="captureBox"><div class="muted small">Camera preview appears after you start capture.</div></div><div class="row" style="margin-top:10px"><button id="startCapture" class="primary">Start camera & mic</button><button id="recordCapture" disabled>Start recording</button><button id="stopCapture" disabled>Stop</button><a id="downloadCapture" class="tag hidden" download="omt-practice.webm">Download your take</a></div><div id="captureStatus" class="small muted" style="margin-top:8px">Waiting for permission.</div></div>
+</section>
+<section id="page-journal" class="page hidden">
+ <div class="hero"><div><div class="eyebrow">05 / Personal progress</div><h2>Session Journal</h2><p>Keep a lightweight record of what you practiced, what changed and what you want to try next.</p></div><div class="heroTag">LOCAL TO THIS BROWSER</div></div>
+ <div class="card"><div class="row between"><h3>Saved sessions</h3><button id="exportJournal" class="ghost">Export journal JSON</button></div><div id="journalList"><p class="muted small">No saved sessions yet.</p></div></div>
+ <div class="callout">Prototype storage: journal entries and XP are stored in this browser using localStorage. They are not synced across devices or accounts. Clear browser data and the entries may be lost.</div>
+</section>
+<section id="page-progress" class="page hidden">
+  <div class="hero"><div><div class="eyebrow">Your progress</div><h2>Points for what you make</h2><p>Points reward participation, creativity, practice and helping others — not time spent online. They are separate from your saved verses, recordings and Library pins.</p></div><div class="heroTag" id="ptsBig">0</div></div>
+  <div class="card"><h3>Achievements</h3><div class="ach" id="achGrid"></div></div>
+  <div class="card"><div class="row between"><h3>Recent activity</h3><button class="ghost" id="exportProgress">Export progress JSON</button></div><div id="evList" class="small muted"></div></div>
+</section>
+<section id="page-profile" class="page hidden">
+  <div class="hero"><div><div class="eyebrow">Your identity</div><h2>Profile & community</h2><p>All optional. You can join sessions with just a name. Nothing here is public: it is only shared with people in a room, as far as you choose.</p></div></div>
+  <div class="grid2">
+    <div class="card"><h3>About you</h3>
+      <div class="field"><label>Avatar</label><div class="chips" id="avatarPick"></div></div>
+      <div class="fieldrow"><div class="field"><label for="pfName">Display name</label><input id="pfName" maxlength="40" placeholder="How you appear in rooms"></div><div class="field"><label for="pfLangs">Languages and level</label><input id="pfLangs" maxlength="100" placeholder="English B2, Russian native"></div></div>
+      <div class="field"><label for="pfBio">Short introduction</label><textarea id="pfBio" maxlength="200" placeholder="A line about you…" style="min-height:60px"></textarea></div>
+      <div class="field"><label>Creative interests</label><div class="chips" id="interestPick"></div></div>
+      <div class="field"><label for="pfShare">What others in a room can see</label><select id="pfShare"><option value="anon">Only a nickname (no avatar, no details)</option><option value="card">Name and avatar</option><option value="full">Name, avatar, introduction and languages</option></select></div>
+      <div class="callout">Your recordings are never shared. They stay on this device unless you download them yourself.</div>
+      <div class="row" style="margin-top:10px"><button class="primary" id="pfSave">Save profile</button><span id="pfMsg" class="small muted"></span></div>
+    </div>
+    <div>
+      <div class="card"><h3>Connections</h3><p class="small muted">After a session you can send a connect request. It only becomes a connection if the other person accepts.</p><div id="friendList"><p class="muted small">No connections yet.</p></div></div>
+      <div class="card"><h3>Encouragement you received</h3><div id="inboxList"><p class="muted small">Nothing yet.</p></div></div>
+      <div class="card"><h3>Blocked</h3><div id="blockList"><p class="muted small">Nobody blocked.</p></div></div>
+    </div>
+  </div>
+</section>
+</main>
+<div class="footer">OMT Live v0.2 · Early release · Video via Jitsi (third party) · No accounts or servers: your data stays in this browser · Adults 18+ · Not for confidential sessions</div>
+</div>
+<div id="modalRoot"></div>
+<script>/* OMT core v0.2.0 — pure logic (no DOM, no network). Runs in the browser and in Node tests.
+   Contents: seeded prompt engine, rhymes, verse model, room protocol (validated), host proof,
+   recording-consent state machine, invites, points/achievements, session export (library-bundle/1 compatible). */
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory();
+  else root.OMTCore = factory();
+})(typeof self !== 'undefined' ? self : this, function () {
+  'use strict';
+  const VERSION = '0.2.0';
+
+  /* ---------- seeded randomness (same seed => same prompt on every device) ---------- */
+  function hashStr(s) {
+    let h = 1779033703 ^ s.length;
+    for (let i = 0; i < s.length; i++) { h = Math.imul(h ^ s.charCodeAt(i), 3432918353); h = h << 13 | h >>> 19; }
+    return () => { h = Math.imul(h ^ h >>> 16, 2246822507); h = Math.imul(h ^ h >>> 13, 3266489909); return (h ^= h >>> 16) >>> 0; };
+  }
+  function rng(seed) {
+    const g = hashStr(String(seed)); let a = g(), b = g(), c = g(), d = g();
+    return () => { a >>>= 0; b >>>= 0; c >>>= 0; d >>>= 0; let t = (a + b) | 0; a = b ^ b >>> 9; b = c + (c << 3) | 0; c = (c << 21 | c >>> 11); d = d + 1 | 0; t = t + d | 0; c = c + t | 0; return (t >>> 0) / 4294967296; };
+  }
+  const pick = (r, a) => a[Math.floor(r() * a.length)];
+  function sample(r, a, n) { const c = a.slice(), o = []; while (o.length < n && c.length) o.push(c.splice(Math.floor(r() * c.length), 1)[0]); return o; }
+  function newSeed() { return Math.random().toString(36).slice(2, 10); }
+  function randId(prefix, n) {
+    const abc = 'abcdefghjkmnpqrstuvwxyz23456789'; let s = '';
+    const b = (typeof crypto !== 'undefined' && crypto.getRandomValues) ? crypto.getRandomValues(new Uint8Array(n || 8)) : Array.from({ length: n || 8 }, () => Math.floor(Math.random() * 256));
+    for (let i = 0; i < (n || 8); i++) s += abc[b[i] % abc.length];
+    return (prefix || '') + s;
+  }
+
+  /* ---------- content ---------- */
+  const CATEGORIES = [
+    { id: 'freestyle', emoji: '🎤', name: 'Freestyle & Rap Jams', tagline: 'Words, rhythm and nerve. Trade bars and build flow.', max: 6, mins: 45, types: ['freestyle', 'three', 'rhyme', 'callresponse'], studio: true },
+    { id: 'songwriting', emoji: '🎵', name: 'Songwriting & Lyric Building', tagline: 'Start with a word or image and write lines together.', max: 4, mins: 60, types: ['word', 'visual', 'emotion', 'rhyme'], studio: true },
+    { id: 'english', emoji: '🗣️', name: 'English Conversation', tagline: 'Talk about real things with real people.', max: 5, mins: 45, types: ['story', 'perspectives', 'osc', 'ielts1'], studio: false },
+    { id: 'exchange', emoji: '🌍', name: 'Language Exchange & Pronunciation', tagline: 'Swap languages, practise sounds, help each other.', max: 4, mins: 45, types: ['word', 'three', 'rhyme', 'story'], studio: false },
+    { id: 'pov', emoji: '💡', name: 'POV Talks & Debate', tagline: 'Hear other points of view. Clarify, challenge, build.', max: 6, mins: 45, types: ['perspectives', 'povcard', 'story'], studio: false },
+    { id: 'story', emoji: '🎭', name: 'Storytelling & Improvisation', tagline: 'Characters, situations and plot twists on the spot.', max: 6, mins: 45, types: ['story', 'osc', 'visual', 'mashup'], studio: false },
+    { id: 'creative', emoji: '🧠', name: 'Creative Thinking & Expression', tagline: 'Connect unrelated ideas and say something new.', max: 6, mins: 40, types: ['mashup', 'emotion', 'word', 'perspectives'], studio: false },
+    { id: 'visual', emoji: '🎨', name: 'Visual Prompt Challenges', tagline: 'Look, describe, invent. Every image starts a story.', max: 6, mins: 40, types: ['visual', 'story', 'three'], studio: false },
+    { id: 'rhythm', emoji: '🎧', name: 'Rhythm, Listening & Call-and-Response', tagline: 'Listen first. Answer in time.', max: 8, mins: 40, types: ['callresponse', 'rhyme', 'freestyle'], studio: true },
+    { id: 'ielts', emoji: '🏆', name: 'IELTS / Speaking Practice', tagline: 'Parts 1–3 with timed answers and honest feedback.', max: 3, mins: 45, types: ['ielts1', 'ielts2', 'ielts3'], studio: false },
+    { id: 'open', emoji: '🤝', name: 'Open Creative Jam', tagline: 'No rules. Bring an idea and see what happens.', max: 8, mins: 60, types: ['word', 'three', 'visual', 'freestyle', 'mashup'], studio: true }
+  ];
+  const LEVELS = ['Any level', 'Beginner', 'Intermediate', 'Advanced'];
+  const THEMES = {
+    nature: { easy: ['river', 'mountain', 'rain', 'forest', 'ocean', 'fire', 'wind', 'moon', 'seed', 'storm', 'sunset', 'island'], hard: ['horizon', 'erosion', 'canopy', 'tide', 'ember', 'glacier', 'monsoon', 'tundra', 'ripple', 'twilight'] },
+    city: { easy: ['train', 'street', 'window', 'taxi', 'bridge', 'market', 'rooftop', 'crowd', 'neon', 'subway', 'corner', 'tower'], hard: ['skyline', 'commute', 'alley', 'rush hour', 'graffiti', 'pavement', 'district', 'blackout', 'billboard', 'gridlock'] },
+    food: { easy: ['bread', 'coffee', 'pepper', 'honey', 'rice', 'lemon', 'soup', 'pizza', 'butter', 'chocolate', 'tea', 'cake'], hard: ['saffron', 'simmer', 'feast', 'harvest', 'umami', 'ferment', 'pantry', 'sizzle', 'recipe', 'appetite'] },
+    travel: { easy: ['airport', 'suitcase', 'passport', 'map', 'ticket', 'beach', 'hotel', 'road', 'ferry', 'camera', 'compass', 'border'], hard: ['layover', 'souvenir', 'itinerary', 'expedition', 'homesick', 'nomad', 'detour', 'customs', 'horizon line', 'departure'] },
+    tech: { easy: ['phone', 'screen', 'robot', 'signal', 'battery', 'code', 'game', 'password', 'wifi', 'camera', 'headphones', 'internet'], hard: ['algorithm', 'glitch', 'firewall', 'upload', 'static', 'circuit', 'avatar', 'pixel', 'network', 'update'] },
+    feelings: { easy: ['happy', 'nervous', 'proud', 'tired', 'brave', 'lonely', 'excited', 'calm', 'angry', 'curious', 'shy', 'free'], hard: ['nostalgia', 'restless', 'grateful', 'bittersweet', 'vulnerable', 'determined', 'melancholy', 'serene', 'overwhelmed', 'hopeful'] },
+    sport: { easy: ['ball', 'race', 'goal', 'team', 'jump', 'runner', 'coach', 'medal', 'swim', 'court', 'whistle', 'finish line'], hard: ['endurance', 'rival', 'marathon', 'sprint', 'training', 'underdog', 'rebound', 'balance', 'victory lap', 'comeback'] },
+    fantasy: { easy: ['dragon', 'castle', 'wizard', 'treasure', 'ghost', 'potion', 'giant', 'portal', 'crown', 'cave', 'sword', 'star'], hard: ['prophecy', 'labyrinth', 'enchanted', 'relic', 'oracle', 'illusion', 'kingdom', 'curse', 'phantom', 'legend'] },
+    work: { easy: ['meeting', 'boss', 'desk', 'email', 'deadline', 'lunch', 'office', 'project', 'salary', 'team', 'coffee break', 'job'], hard: ['promotion', 'negotiate', 'burnout', 'freelance', 'schedule', 'mentor', 'ambition', 'overtime', 'startup', 'career'] },
+    music: { easy: ['drum', 'guitar', 'beat', 'song', 'dance', 'bass', 'piano', 'voice', 'choir', 'speaker', 'stage', 'headphones'] , hard: ['rhythm', 'harmony', 'chorus', 'melody', 'tempo', 'improvise', 'echo', 'crescendo', 'groove', 'refrain'] }
+  };
+  const THEME_IDS = Object.keys(THEMES);
+  const CHARACTERS = ['a sleepy detective', 'a retired astronaut', 'a street musician', 'a nervous chef', 'a time-travelling teacher', 'a talking cat', 'a lost tourist', 'a shy superhero', 'a robot learning to dance', 'a night-shift taxi driver', 'a mountain guide', 'a young inventor', 'an old sailor', 'a famous liar', 'a village baker', 'a ghost who is afraid of people'];
+  const SITUATIONS = ['stuck in a lift', 'on the last train home', 'at a wedding where nobody knows anyone', 'in the middle of a power cut', 'at the airport with the wrong passport', 'waiting for important news', 'on a first day at a new job', 'lost in a city with no phone', 'during a surprise party that went wrong', 'in a storm on a small boat', 'at a market that only appears at night', 'in a race against the clock'];
+  const OBJECTS = ['an old key', 'a broken umbrella', 'a glowing envelope', 'a suitcase with no handle', 'a golden spoon', 'a map with one missing corner', 'a pair of mismatched shoes', 'a clock that runs backwards', 'a tiny radio', 'a notebook full of blank pages', 'a bag of mystery seeds', 'a paper boat'];
+  const EMOTIONS = ['joy', 'jealousy', 'courage', 'regret', 'curiosity', 'freedom', 'patience', 'surprise', 'pride', 'homesickness', 'hope', 'fear of change', 'belonging', 'ambition', 'forgiveness', 'boredom'];
+  const STORY_STARTS = ['The door had never been open before, and then', 'Nobody believed her until the morning when', 'The last message on the phone said only: "Don’t wait."', 'On the first day of summer the town woke up and every clock', 'He found the recipe in a book that wasn’t his, and', 'The signal came from the sea, and it sounded like', 'It was an ordinary Tuesday until the ground began to hum.', 'They agreed to swap lives for one day, but'];
+  const PERSPECTIVES = [
+    ['Social media makes people more creative.', 'Social media makes people copy each other.'],
+    ['Learning alone is more effective.', 'Learning with others is more effective.'],
+    ['It is better to be understood than to be right.', 'It is better to be right than to be understood.'],
+    ['Cities are better places to grow up.', 'Small towns are better places to grow up.'],
+    ['Failure is the best teacher.', 'Success is the best teacher.'],
+    ['Technology brings people together.', 'Technology keeps people apart.'],
+    ['Talent matters more than practice.', 'Practice matters more than talent.'],
+    ['Money is the main source of freedom.', 'Time is the main source of freedom.'],
+    ['Art should make people comfortable.', 'Art should make people uncomfortable.'],
+    ['Everyone should learn a second language.', 'Translation tools make learning languages unnecessary.']
+  ];
+  const CALLS = [
+    ['Host says a line that ends with a colour. Answer with a line that rhymes with it.', 'blue'],
+    ['Host claps a pattern. Repeat it exactly, then add one new beat.', ''],
+    ['Host says a word. Answer with the first word it makes you think of, in time.', ''],
+    ['Host says "I wake up and…". Finish the line in four beats.', ''],
+    ['Host says a line. Answer by changing only one word to flip its meaning.', ''],
+    ['Host says three words. Answer with a line that uses all three.', ''],
+    ['Host says a line about the city. Answer with a line about the countryside that rhymes.', ''],
+    ['Host says a question. Answer in exactly four words.', '']
+  ];
+  const IELTS = {
+    1: [['Do you enjoy learning new skills?', 'Give reasons and a brief example.'], ['What do you usually do to relax?', 'Explain when and why.'], ['Do you prefer learning alone or with others?', 'Compare your preferences.']],
+    2: [['Describe a skill you learned that has been useful in your life.', 'You should say what the skill is, how you learned it, and explain why it has been useful.'], ['Describe a video that taught you how to do something.', 'Say what it demonstrated, what you learned, and whether you used the technique.'], ['Describe a time you explained an idea to another person.', 'Say what the idea was, who you spoke to, and how the conversation went.']],
+    3: [['How has online learning changed the way people develop skills?', 'Consider access, attention and feedback.'], ['Should schools teach creativity as a practical skill?', 'Discuss possible benefits and limitations.'], ['Why do some people learn more effectively by observing others?', 'Consider imitation, modeling and independent practice.']]
+  };
+  const POV_CARDS = ['Does technology make people more independent, or more dependent?', 'Should people prioritize being understood or being persuasive?', 'Can watching someone perform a skill be as valuable as direct instruction?', 'Does social media encourage creativity or imitation?', 'Is confidence something you build privately or demonstrate publicly?', 'Should schools reward experimentation even when the result is imperfect?'];
+
+  // Rhyme families: groups of words that rhyme by sound (hand-written; spelling fallback is approximate)
+  const RHYMES = [
+    'day way play say stay away today gray display okay delay pay', 'night light fight right sight flight bright tonight might height write', 'time rhyme climb prime line mine shine sign fine design',
+    'love above glove shove dove', 'heart start part art smart apart chart', 'mind find kind behind blind signed remind', 'dream team stream seem beam theme scream',
+    'real feel deal heal steal wheel kneel reveal', 'know show flow go grow slow glow below throw', 'fire higher desire wire tired inspire', 'sound ground round found around profound crowd',
+    'free be see key sea three me tree agree', 'cold gold bold hold told old fold behold', 'rain pain train brain chain gain lane remain', 'stone alone phone own tone zone throne grown',
+    'rise eyes skies lies wise prize surprise', 'hand land stand band planned grand understand', 'beat street feet heat meet seat repeat complete', 'high sky fly try why cry eye goodbye',
+    'run sun fun one done begun none', 'name game flame same came frame fame', 'cool rule school fool tool pool', 'back track black pack crack stack attack',
+    'bone zone clone tone', 'way sway stay may array', 'blue true view through new grew do', 'door floor more before core store ignore explore',
+    'bell tell well spell sell yell farewell', 'hear near clear fear year appear here', 'ring sing king thing bring spring wing', 'town down crown brown sound clown',
+    'stage page age cage rage wage engage', 'mood food rude attitude', 'move groove prove improve', 'bright night write ignite',
+    'flow glow show know slow', 'chance dance trance advance romance', 'voice choice rejoice noise', 'storm form warm perform norm transform',
+    'road code load mode flowed showed', 'peace release increase cease', 'ease please seas breeze freeze', 'truth youth proof'
+  ].map(s => Array.from(new Set(s.split(' '))));
+  // Merge families that share a word is intentionally not done; first family containing the word wins.
+  function normWord(w) { return String(w || '').toLowerCase().replace(/[^a-z' ]/g, '').trim(); }
+  function lastWord(line) { const m = normWord(line).split(/\s+/).filter(Boolean); return m.length ? m[m.length - 1] : ''; }
+  function familiesFor(word) { const w = normWord(word); const out = []; RHYMES.forEach((f, i) => { if (f.includes(w)) out.push(i); }); return out; }
+  function spellKey(w) {
+    w = normWord(w).replace(/[^a-z]/g, ''); if (!w) return '';
+    const m = w.match(/[aeiouy]+[^aeiouy]*e?$/); let k = m ? m[0] : w.slice(-3);
+    return k.replace(/^e(?=[^aeiouy]e$)/, 'e');
+  }
+  function rhymeKey(word) { const f = familiesFor(word); return f.length ? 'F' + f[0] : 'S' + spellKey(word); }
+  function allKnownWords() { const s = new Set(); RHYMES.forEach(f => f.forEach(w => s.add(w))); THEME_IDS.forEach(t => THEMES[t].easy.concat(THEMES[t].hard).forEach(w => { if (!/\s/.test(w)) s.add(w); })); return Array.from(s); }
+  function rhymesFor(word, n) {
+    const w = normWord(word); if (!w) return [];
+    const out = new Set(); familiesFor(w).forEach(i => RHYMES[i].forEach(x => { if (x !== w) out.add(x); }));
+    if (out.size < (n || 8)) { const k = spellKey(w); if (k) allKnownWords().forEach(x => { if (x !== w && spellKey(x) === k) out.add(x); }); }
+    return Array.from(out).slice(0, n || 12);
+  }
+  function associate(word, theme, n, seed) {
+    const w = normWord(word); const r = rng('assoc|' + w + '|' + (seed || ''));
+    let pool = [];
+    THEME_IDS.forEach(t => { const all = THEMES[t].easy.concat(THEMES[t].hard); if (all.includes(w)) pool = pool.concat(all); });
+    if (!pool.length) { const ts = theme && THEMES[theme] ? [theme] : THEME_IDS; ts.forEach(t => { pool = pool.concat(THEMES[t].easy); }); }
+    pool = Array.from(new Set(pool)).filter(x => x !== w);
+    return sample(r, pool, n || 8);
+  }
+  function syllables(word) {
+    let w = normWord(word).replace(/[^a-z]/g, ''); if (!w) return 0; if (w.length <= 3) return 1;
+    w = w.replace(/eau/g, 'o').replace(/yle$/, 'yl').replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '').replace(/^y/, '');
+    const m = w.match(/[aeiouy]{1,2}/g); return m ? m.length : 1;
+  }
+  const lineSyllables = line => String(line || '').split(/\s+/).filter(Boolean).reduce((a, w) => a + syllables(w), 0);
+
+  /* ---------- prompt engine ---------- */
+  const PROMPT_TYPES = [
+    { id: 'word', label: 'Random word', secs: 30 }, { id: 'three', label: 'Three-word challenge', secs: 45 }, { id: 'rhyme', label: 'Rhyme challenge', secs: 45 },
+    { id: 'visual', label: 'Visual prompt', secs: 60 }, { id: 'osc', label: 'Character · situation · object', secs: 60 }, { id: 'emotion', label: 'Emotion / abstract idea', secs: 45 },
+    { id: 'story', label: 'Story starter', secs: 90 }, { id: 'perspectives', label: 'Opposing perspectives', secs: 90 }, { id: 'mashup', label: 'Unrelated mash-up', secs: 60 },
+    { id: 'callresponse', label: 'Call-and-response', secs: 40 }, { id: 'freestyle', label: 'Timed freestyle', secs: 60 },
+    { id: 'ielts1', label: 'IELTS Part 1', secs: 45 }, { id: 'ielts2', label: 'IELTS Part 2', secs: 120 }, { id: 'ielts3', label: 'IELTS Part 3', secs: 60 }, { id: 'povcard', label: 'POV discussion card', secs: 60 }
+  ];
+  const typeInfo = id => PROMPT_TYPES.find(t => t.id === id) || PROMPT_TYPES[0];
+  function wordPool(theme, difficulty) {
+    const ts = theme && THEMES[theme] ? [theme] : THEME_IDS; let p = [];
+    ts.forEach(t => { const T = THEMES[t]; p = p.concat(difficulty === 'easy' ? T.easy : difficulty === 'hard' ? T.hard : T.easy.concat(T.hard)); });
+    return Array.from(new Set(p));
+  }
+  function visualSpec(seed, difficulty) {
+    const r = rng('vis|' + seed);
+    const pal = [['#1b2a49', '#e94f37'], ['#0b3d2e', '#f6c85f'], ['#2d1b3d', '#6fdfdf'], ['#3a1c1c', '#f4a259'], ['#10253f', '#a8e6cf'], ['#2b2d42', '#ef233c'], ['#1d3557', '#ffb703']];
+    const [c1, c2] = pick(r, pal);
+    const pool = ['🐢', '🌋', '🎷', '🚲', '🌙', '🦊', '🏠', '🚀', '🌊', '🎈', '🕯️', '🦉', '🗝️', '☂️', '🍄', '🧭', '🐘', '🎻', '⚓', '🌵', '🛶', '🔥', '🐙', '🪁'];
+    const n = difficulty === 'easy' ? 3 : difficulty === 'hard' ? 6 : 4;
+    const items = sample(r, pool, n).map(e => ({ e, x: Math.round(10 + r() * 80), y: Math.round(15 + r() * 70), s: Math.round(34 + r() * 46), rot: Math.round(r() * 50 - 25) }));
+    const shapes = Array.from({ length: 4 }, () => ({ k: pick(r, ['circle', 'rect', 'tri']), x: Math.round(r() * 100), y: Math.round(r() * 100), s: Math.round(12 + r() * 30), o: +(0.12 + r() * 0.25).toFixed(2) }));
+    return { bg: [c1, c2], items, shapes, names: items.map(i => i.e) };
+  }
+  function generatePrompt(o) {
+    o = o || {}; const type = typeInfo(o.type).id, seed = o.seed || newSeed(), difficulty = o.difficulty || 'medium', theme = o.theme && THEMES[o.theme] ? o.theme : '';
+    const r = rng(type + '|' + seed + '|' + difficulty + '|' + theme); const pool = wordPool(theme, difficulty);
+    const P = { schema: 'omt-prompt/1', id: 'pr_' + String(seed).slice(0, 8) + '_' + type, type, seed, difficulty, theme, language: o.language || 'en', seconds: o.seconds || typeInfo(type).secs, title: typeInfo(type).label, text: '', hint: '', items: [], visual: null };
+    switch (type) {
+      case 'word': P.items = [pick(r, pool)]; P.text = P.items[0]; P.hint = 'Say or write whatever it makes you think of. Then turn it into one strong line.'; break;
+      case 'three': P.items = sample(r, pool, 3); P.text = P.items.join(' · '); P.hint = 'Use all three words in one short story, verse or answer.'; break;
+      case 'rhyme': { const fams = RHYMES.filter(f => f.length >= 6); const fam = pick(r, fams); const w = pick(r, fam); P.items = [w]; P.rhymes = fam.filter(x => x !== w).slice(0, 8); P.text = w; P.hint = 'Make four lines that end on words that rhyme with this one. Hints are optional.'; break; }
+      case 'visual': P.visual = visualSpec(seed, difficulty); P.text = 'What do you see?'; P.hint = 'Name three things in the picture, then tell what happens next. Or rap about it.'; break;
+      case 'osc': P.items = [pick(r, CHARACTERS), pick(r, SITUATIONS), pick(r, OBJECTS)]; P.text = P.items[0] + ', ' + P.items[1] + ', with ' + P.items[2] + '.'; P.hint = 'Tell what happens. Or make it a four-bar verse.'; break;
+      case 'emotion': { const e = pick(r, EMOTIONS); P.items = [e]; P.text = e; P.hint = difficulty === 'hard' ? 'Express it without using the word itself.' : 'Tell about a time you felt it, or describe what it looks like.'; break; }
+      case 'story': P.items = [pick(r, STORY_STARTS)]; P.text = P.items[0]; P.hint = 'Continue the story. Each person adds two sentences.'; break;
+      case 'perspectives': { const pair = pick(r, PERSPECTIVES); P.items = pair.slice(); P.text = 'Two sides'; P.hint = 'Take a side. Then argue the other side as well as you can.'; break; }
+      case 'mashup': { const t1 = pick(r, THEME_IDS); let t2 = pick(r, THEME_IDS); while (t2 === t1) t2 = pick(r, THEME_IDS); const a = pick(r, THEMES[t1].easy.concat(difficulty === 'easy' ? [] : THEMES[t1].hard)); const b = pick(r, THEMES[t2].easy.concat(difficulty === 'easy' ? [] : THEMES[t2].hard)); P.items = [a, b]; P.text = a + ' + ' + b; P.hint = 'Connect these two things in one idea, line or story.'; break; }
+      case 'callresponse': { const c = pick(r, CALLS); P.items = [c[0]]; P.text = c[0]; P.hint = 'Keep time. Answer quickly. Perfect is not the point.'; break; }
+      case 'freestyle': { const ws = sample(r, pool, 3); const bars = difficulty === 'easy' ? 2 : difficulty === 'hard' ? 8 : 4; P.items = ws; P.bars = bars; P.text = ws.join(' · '); P.hint = 'Freestyle ' + bars + ' bars. Use at least one word; use all three for a bonus.'; break; }
+      case 'ielts1': case 'ielts2': case 'ielts3': { const part = +type.slice(-1); const p = pick(r, IELTS[part]); P.items = [p[0]]; P.text = p[0]; P.hint = p[1]; P.seconds = o.seconds || (part === 2 ? 120 : part === 1 ? 45 : 60); break; }
+      case 'povcard': P.items = [pick(r, POV_CARDS)]; P.text = P.items[0]; P.hint = 'Give your position, one reason and one example. Then invite a challenge.'; break;
+    }
+    return P;
+  }
+
+  /* ---------- verse model (collaborative, op-based, idempotent) ---------- */
+  function newVerse(id, title) { const t = new Date().toISOString(); return { schema: 'omt-verse/1', id: id || randId('vs_', 8), title: title || '', lines: [], created: t, updated: t }; }
+  function applyVerseOp(v, op) {
+    if (!op || !op.op) return v; const t = new Date().toISOString();
+    if (op.op === 'add') { if (v.lines.some(l => l.id === op.id)) return v; v.lines.push({ id: String(op.id), text: String(op.text || '').slice(0, 200), by: String(op.by || '').slice(0, 40), byUid: String(op.byUid || '').slice(0, 40), at: op.at || t }); }
+    else if (op.op === 'edit') { const l = v.lines.find(x => x.id === op.id); if (l) l.text = String(op.text || '').slice(0, 200); }
+    else if (op.op === 'del') { v.lines = v.lines.filter(x => x.id !== op.id); }
+    else if (op.op === 'move') { const i = v.lines.findIndex(x => x.id === op.id); const j = i + (op.dir < 0 ? -1 : 1); if (i >= 0 && j >= 0 && j < v.lines.length) { const x = v.lines[i]; v.lines[i] = v.lines[j]; v.lines[j] = x; } }
+    v.updated = t; return v;
+  }
+  function rhymeGroups(lines) {
+    const keys = lines.map(l => { const w = lastWord(l.text); return w ? rhymeKey(w) : ''; }); const count = {}; keys.forEach(k => { if (k) count[k] = (count[k] || 0) + 1; });
+    const ids = {}; let n = 0; return keys.map(k => { if (!k || count[k] < 2) return -1; if (!(k in ids)) ids[k] = n++; return ids[k]; });
+  }
+  const filledLines = v => v.lines.filter(l => l.text.trim());
+  const completedBars = v => Math.floor(filledLines(v).length / 4);
+  const authors = v => Array.from(new Set(filledLines(v).map(l => l.byUid || l.by).filter(Boolean)));
+  const isCollab = v => authors(v).length >= 2;
+
+  /* ---------- invites and host proof ---------- */
+  function b64u(str) { const bytes = new TextEncoder().encode(str); let s = ''; bytes.forEach(b => s += String.fromCharCode(b)); return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
+  function unb64u(s) { s = s.replace(/-/g, '+').replace(/_/g, '/'); while (s.length % 4) s += '='; const bin = atob(s); const bytes = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i); return new TextDecoder().decode(bytes); }
+  const clampStr = (s, n) => String(s == null ? '' : s).replace(/[\u0000-\u001f]/g, ' ').slice(0, n);
+  function newRoomCode() { return 'OMT-' + randId('', 4).toUpperCase() + '-' + randId('', 4).toUpperCase(); }
+  function cleanSession(c) {
+    c = c || {}; const cat = CATEGORIES.find(x => x.id === c.cat) ? c.cat : 'open';
+    const mode = c.mode === 'one' ? 'one' : 'group';
+    let max = Math.max(2, Math.min(12, parseInt(c.max, 10) || 6)); if (mode === 'one') max = 2;
+    return {
+      v: 1, room: /^[A-Za-z0-9-]{4,40}$/.test(c.room || '') ? c.room : newRoomCode(), cat, topic: clampStr(c.topic, 120), level: LEVELS.includes(c.level) ? c.level : 'Any level',
+      lang: clampStr(c.lang || 'English', 30), mins: Math.max(5, Math.min(180, parseInt(c.mins, 10) || 45)), max, mode, lobby: !!c.lobby, hostName: clampStr(c.hostName, 40), hp: /^[A-Za-z0-9_-]{43}\.[A-Za-z0-9_-]{43}$/.test(c.hp || '') ? c.hp : '',
+      domain: /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(c.domain || '') ? c.domain.toLowerCase() : 'meet.jit.si', when: clampStr(c.when, 40)
+    };
+  }
+  function encodeInvite(cfg) { return b64u(JSON.stringify(cleanSession(cfg))); }
+  function decodeInvite(s) { try { s = String(s || '').trim(); const m = s.match(/[#&?]j=([A-Za-z0-9_-]+)/); if (m) s = m[1]; if (!/^[A-Za-z0-9_-]{8,4000}$/.test(s)) return null; const o = JSON.parse(unb64u(s)); if (!o || o.v !== 1) return null; return cleanSession(o); } catch (e) { return null; } }
+  /* ---------- host signatures (ECDSA P-256): the invite carries the host's PUBLIC key; the private key never leaves the host's browser ---------- */
+  function bytesToB64u(bytes) { let s = ''; bytes.forEach(b => s += String.fromCharCode(b)); return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
+  function b64uToBytes(s) { s = String(s).replace(/-/g, '+').replace(/_/g, '/'); while (s.length % 4) s += '='; const bin = atob(s); const out = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i); return out; }
+  const ALG = { name: 'ECDSA', namedCurve: 'P-256' }, SIGALG = { name: 'ECDSA', hash: 'SHA-256' };
+  async function newHostKeypair() {
+    const kp = await crypto.subtle.generateKey(ALG, true, ['sign', 'verify']);
+    const pub = await crypto.subtle.exportKey('jwk', kp.publicKey); const priv = await crypto.subtle.exportKey('jwk', kp.privateKey);
+    return { pub: pub.x + '.' + pub.y, priv };
+  }
+  async function signText(privJwk, text) { const k = await crypto.subtle.importKey('jwk', privJwk, ALG, false, ['sign']); return bytesToB64u(new Uint8Array(await crypto.subtle.sign(SIGALG, k, new TextEncoder().encode(text)))); }
+  async function verifyText(pub, text, sig) {
+    try { const p = String(pub).split('.'); if (p.length !== 2) return false; const k = await crypto.subtle.importKey('jwk', { kty: 'EC', crv: 'P-256', x: p[0], y: p[1], ext: true }, ALG, false, ['verify']); return await crypto.subtle.verify(SIGALG, k, b64uToBytes(sig), new TextEncoder().encode(text)); }
+    catch (e) { return false; }
+  }
+  async function encodeSigned(type, payload, privJwk, seq) {
+    const body = JSON.stringify({ t: type, p: payload || {}, n: seq || Date.now() }); const o = JSON.parse(body); o.s = await signText(privJwk, body); return 'OMT1' + JSON.stringify(o);
+  }
+  // Returns {ok, seq, reason}. A message is accepted only if signed by the invite's host key and newer than the last accepted one.
+  async function verifySigned(text, pub, lastSeq) {
+    if (typeof text !== 'string' || !text.startsWith('OMT1') || text.length > 24000 || !pub) return { ok: false, reason: 'format' };
+    let o; try { o = JSON.parse(text.slice(4)); } catch (e) { return { ok: false, reason: 'json' }; }
+    if (!o || typeof o.s !== 'string' || typeof o.n !== 'number' || typeof o.t !== 'string') return { ok: false, reason: 'unsigned' };
+    if (!(o.n > (lastSeq || 0))) return { ok: false, reason: 'replay' };
+    const sig = o.s; const body = JSON.stringify({ t: o.t, p: o.p, n: o.n });
+    return { ok: await verifyText(pub, body, sig), seq: o.n, reason: 'signature' };
+  }
+
+  /* ---------- room protocol (everything from other people is hostile until validated) ---------- */
+  const S = (v, n) => clampStr(v, n);
+  const N = (v, lo, hi) => { v = Number(v); return isFinite(v) ? Math.max(lo, Math.min(hi, v)) : lo; };
+  const STRS = (a, n, m) => Array.isArray(a) ? a.slice(0, m).map(x => S(x, n)) : [];
+  const PROTO = {
+    hello: p => ({ name: S(p.name, 40), uid: S(p.uid, 40), avatar: S(p.avatar, 8), bio: S(p.bio, 200), langs: S(p.langs, 100), hk: S(p.hk, 100), host: !!p.host }),
+    state: p => ({ prompt: p.prompt && typeof p.prompt === 'object' ? cleanPrompt(p.prompt) : null, timer: p.timer ? { left: N(p.timer.left, 0, 7200), running: !!p.timer.running } : null, turn: p.turn ? cleanTurn(p.turn) : null, verse: p.verse && typeof p.verse === 'object' ? cleanVerse(p.verse) : null, tab: S(p.tab, 12) }),
+    tab: p => ({ tab: S(p.tab, 12) }),
+    prompt: p => ({ prompt: cleanPrompt(p.prompt || {}) }),
+    timer: p => ({ action: ['start', 'pause', 'reset'].includes(p.action) ? p.action : 'pause', seconds: N(p.seconds, 5, 7200) }),
+    turn: p => ({ turn: cleanTurn(p.turn || {}) }),
+    react: p => ({ e: S(p.e, 8) }),
+    verseop: p => ({ op: cleanOp(p.op || {}) }),
+    recreq: p => ({ id: S(p.id, 30), name: S(p.name, 40) }),
+    recresp: p => ({ id: S(p.id, 30), allow: !!p.allow }),
+    recstop: p => ({ id: S(p.id, 30) }),
+    recstatus: p => ({ id: S(p.id, 30), state: ['recording', 'ended'].includes(p.state) ? p.state : 'ended', name: S(p.name, 40), reason: S(p.reason, 80) }),
+    connect: p => ({ card: cleanCard(p.card || {}) }),
+    connectresp: p => ({ accept: !!p.accept, card: cleanCard(p.card || {}) }),
+    thanks: p => ({ e: S(p.e, 8), text: S(p.text, 140) }),
+    end: p => ({ note: S(p.note, 140) })
+  };
+  const HOST_ONLY = new Set(['state', 'tab', 'prompt', 'timer', 'end']);
+  function cleanCard(c) { return { uid: S(c.uid, 40), name: S(c.name, 40), avatar: S(c.avatar, 8), bio: S(c.bio, 200), langs: S(c.langs, 100) }; }
+  function cleanPrompt(p) {
+    return { type: typeInfo(p.type).id, seed: S(p.seed, 24) || 'x', difficulty: ['easy', 'medium', 'hard'].includes(p.difficulty) ? p.difficulty : 'medium', theme: THEMES[p.theme] ? p.theme : '', seconds: N(p.seconds, 5, 7200), language: S(p.language, 20) || 'en' };
+  }
+  function cleanTurn(t) { return { order: Array.isArray(t.order) ? t.order.slice(0, 16).map(x => ({ id: S(x.id, 60), name: S(x.name, 40) })) : [], index: N(t.index, 0, 15), on: !!t.on }; }
+  function cleanOp(o) { return { op: ['add', 'edit', 'del', 'move'].includes(o.op) ? o.op : 'edit', id: S(o.id, 30), text: S(o.text, 200), by: S(o.by, 40), byUid: S(o.byUid, 40), dir: o.dir < 0 ? -1 : 1, at: S(o.at, 30) }; }
+  function cleanVerse(v) { return { id: S(v.id, 30), title: S(v.title, 80), lines: Array.isArray(v.lines) ? v.lines.slice(0, 64).map(l => ({ id: S(l.id, 30), text: S(l.text, 200), by: S(l.by, 40), byUid: S(l.byUid, 40), at: S(l.at, 30) })) : [] }; }
+  function encode(type, payload) { return 'OMT1' + JSON.stringify({ t: type, p: payload || {} }); }
+  function decode(text) {
+    if (typeof text !== 'string' || text.length > 24000 || !text.startsWith('OMT1')) return null;
+    let o; try { o = JSON.parse(text.slice(4)); } catch (e) { return null; }
+    if (!o || typeof o.t !== 'string' || !Object.prototype.hasOwnProperty.call(PROTO, o.t) || !o.p || typeof o.p !== 'object') return null;
+    try { return { type: o.t, payload: PROTO[o.t](o.p), hostOnly: HOST_ONLY.has(o.t) }; } catch (e) { return null; }
+  }
+
+  /* ---------- recording consent (recording is off by default; needs everyone present) ---------- */
+  const CONSENT_TIMEOUT_MS = 45000;
+  function consentStart(o) {
+    const present = (o.present || []).filter(id => id !== o.by);
+    return { id: o.id, by: o.by, byName: o.byName || '', asked: present.slice(), allowed: [], declined: [], startedAt: o.now !== undefined ? o.now : Date.now(), state: 'pending', reason: '' };
+  }
+  function consentRespond(c, pid, allow) {
+    if (!c || c.state === 'ended') return c; if (!c.asked.includes(pid)) return c;
+    c.allowed = c.allowed.filter(x => x !== pid); c.declined = c.declined.filter(x => x !== pid); (allow ? c.allowed : c.declined).push(pid); return c;
+  }
+  function consentPresence(c, presentIds) {
+    if (!c) return c; const others = presentIds.filter(id => id !== c.by);
+    c.asked = c.asked.filter(id => others.includes(id)); c.allowed = c.allowed.filter(id => others.includes(id)); c.declined = c.declined.filter(id => others.includes(id));
+    const joined = others.filter(id => !c.asked.includes(id));
+    if (joined.length) { if (c.state === 'granted') { c.state = 'needs-reconsent'; c.reason = 'Someone joined'; } else if (c.state === 'pending') c.asked.push.apply(c.asked, joined); }
+    return c;
+  }
+  function consentActivate(c) { if (c && consentStatus(c, c.startedAt) === 'granted') c.state = 'granted'; return c; }  // call when recording actually starts
+  function consentStatus(c, now) {
+    if (!c) return 'none'; if (c.state === 'needs-reconsent' || c.state === 'ended' || c.state === 'granted') return c.state;
+    if (c.declined.length) return 'declined';
+    if (c.asked.every(id => c.allowed.includes(id))) return 'granted';
+    if ((now !== undefined ? now : Date.now()) - c.startedAt > CONSENT_TIMEOUT_MS) return 'expired';
+    return 'pending';
+  }
+
+  /* ---------- points and achievements (separate from pins and saved assets) ---------- */
+  const POINTS = { session_join: 5, session_host: 8, prompt_done: 3, line_added: 1, verse_done: 10, collab_verse: 15, appreciation: 3, challenge: 5, take: 2, language_practice: 5, freestyle_done: 6, legacy_xp: 0 };
+  const DAILY_CAP = { line_added: 10, appreciation: 3, take: 5, prompt_done: 15 };
+  const ACHIEVEMENTS = [
+    { id: 'first_session', emoji: '🚪', title: 'First session', desc: 'Joined or hosted a session.', test: e => has(e, 'session_join') || has(e, 'session_host') },
+    { id: 'first_freestyle', emoji: '🎤', title: 'First freestyle', desc: 'Finished a timed freestyle.', test: e => has(e, 'freestyle_done') },
+    { id: 'first_verse', emoji: '🎼', title: 'First four-bar verse', desc: 'Wrote four lines in one verse.', test: e => has(e, 'verse_done') },
+    { id: 'first_collab', emoji: '🤝', title: 'First collaboration', desc: 'Built a verse with another person.', test: e => has(e, 'collab_verse') },
+    { id: 'first_language', emoji: '🌍', title: 'First language practice', desc: 'Practised in a language session or the Pronounz lab.', test: e => has(e, 'language_practice') },
+    { id: 'consistent', emoji: '🔁', title: 'Consistent practice', desc: 'Practised on 3 different days within a week.', test: (e, now) => practiceDays(e, now, 7) >= 3 },
+    { id: 'helper', emoji: '💛', title: 'Helped someone', desc: 'Sent encouragement to another participant.', test: e => has(e, 'appreciation') },
+    { id: 'challenger', emoji: '🏆', title: 'Challenge complete', desc: 'Completed a creative challenge.', test: e => has(e, 'challenge') }
+  ];
+  function has(events, type) { return events.some(e => e.type === type); }
+  function practiceDays(events, now, days) { const lim = (now || Date.now()) - days * 86400000; return new Set(events.filter(e => e.type !== 'legacy_xp' && Date.parse(e.at) >= lim).map(e => e.at.slice(0, 10))).size; }
+  function newProgress() { return { schema: 'omt-progress/1', points: 0, events: [], ach: {} }; }
+  function award(prog, type, o) {
+    o = o || {}; const now = o.now || Date.now(); const at = new Date(now).toISOString(); const day = at.slice(0, 10);
+    let pts = o.points !== undefined ? o.points : (POINTS[type] || 0);
+    if (DAILY_CAP[type]) { const used = prog.events.filter(e => e.type === type && e.at.slice(0, 10) === day).length; if (used >= DAILY_CAP[type]) pts = 0; }
+    prog.events.push({ type, at, pts, ref: o.ref ? String(o.ref).slice(0, 60) : '' }); prog.points += pts;
+    if (prog.events.length > 2000) prog.events = prog.events.slice(-2000);
+    const newAch = []; ACHIEVEMENTS.forEach(a => { if (!prog.ach[a.id] && a.test(prog.events, now)) { prog.ach[a.id] = at; newAch.push(a); } });
+    return { gained: pts, newAch };
+  }
+
+  /* ---------- session summary and export (library-bundle/1 compatible assets) ---------- */
+  function envelope(type, id, content, links, extra) {
+    const t = new Date().toISOString();
+    return Object.assign({ schema: 'asset/1', id, type, created: (extra && extra.created) || t, updated: t, content, source: null, provenance: { tool: 'omt-live', toolVersion: VERSION, method: 'session' }, tags: ['omt'], links: links || [], externalRefs: [], ext: {} }, extra && extra.more ? extra.more : {});
+  }
+  function buildSessionAssets(s) {
+    const sid = s.id || randId('session_', 10); const assets = [];
+    assets.push(envelope('session', sid, { category: s.cat, topic: s.topic, level: s.level, language: s.lang, startedAt: s.startedAt, endedAt: s.endedAt, durationMin: s.durationMin, participants: s.participants || [], host: s.hostName, promptCount: (s.prompts || []).length, reactions: s.reactions || 0, takes: s.takes || 0, notes: s.notes || '' }, [], { created: s.startedAt }));
+    (s.prompts || []).forEach((p, i) => assets.push(envelope('prompt', sid + '_p' + (i + 1), p, [{ rel: 'partOf', id: sid }], { created: s.startedAt })));
+    (s.verses || []).filter(v => filledLines(v).length).forEach(v => assets.push(envelope('verse', 'verse_' + v.id.replace(/^vs_/, ''), { title: v.title, lines: filledLines(v).map(l => ({ text: l.text, by: l.by })), bars: completedBars(v), collaborative: isCollab(v) }, [{ rel: 'partOf', id: sid }], { created: v.created })));
+    return assets;
+  }
+  function buildBundle(assets) { return { schema: 'library-bundle/1', exportedAt: new Date().toISOString(), tool: 'omt-live ' + VERSION, assets, events: [] }; }
+  function sessionMarkdown(s) {
+    const cat = CATEGORIES.find(c => c.id === s.cat) || { emoji: '', name: s.cat }; const L = [];
+    L.push('# ' + cat.emoji + ' ' + cat.name + (s.topic ? ' — ' + s.topic : ''), '', '- When: ' + (s.startedAt || '') + (s.durationMin ? ' (' + s.durationMin + ' min)' : ''), '- Level: ' + s.level + ' · Language: ' + s.lang, '- Host: ' + (s.hostName || ''), '- Participants: ' + ((s.participants || []).join(', ') || '(just you)'), '- Prompts used: ' + (s.prompts || []).length + ' · Reactions: ' + (s.reactions || 0) + ' · Practice takes saved on your device: ' + (s.takes || 0), '');
+    if ((s.prompts || []).length) { L.push('## Prompts'); s.prompts.forEach((p, i) => L.push((i + 1) + '. ' + p.title + ' — ' + (p.text || '(visual prompt)'))); L.push(''); }
+    (s.verses || []).filter(v => filledLines(v).length).forEach(v => { L.push('## Verse' + (v.title ? ': ' + v.title : '') + ' (' + completedBars(v) + ' complete four-bar section' + (completedBars(v) === 1 ? '' : 's') + (isCollab(v) ? ', collaborative' : '') + ')'); filledLines(v).forEach(l => L.push('- ' + l.text + (l.by ? '  _(' + l.by + ')_' : ''))); L.push(''); });
+    if (s.notes) L.push('## Notes', s.notes, '');
+    return L.join('\n');
+  }
+
+  return {
+    VERSION, CATEGORIES, LEVELS, THEMES, THEME_IDS, PROMPT_TYPES, RHYMES, IELTS, POV_CARDS, POINTS, ACHIEVEMENTS, CONSENT_TIMEOUT_MS,
+    rng, newSeed, randId, generatePrompt, visualSpec, typeInfo, rhymesFor, rhymeKey, associate, syllables, lineSyllables, lastWord,
+    newVerse, applyVerseOp, rhymeGroups, filledLines, completedBars, authors, isCollab,
+    newRoomCode, cleanSession, encodeInvite, decodeInvite, newHostKeypair, signText, verifyText, encodeSigned, verifySigned, encode, decode, HOST_ONLY,
+    consentStart, consentRespond, consentPresence, consentStatus, consentActivate,
+    newProgress, award, buildSessionAssets, buildBundle, sessionMarkdown, b64u, unb64u
+  };
+});
+</script>
+<script>(()=>{
+const $=id=>document.getElementById(id);const state={stream:null,recorder:null,recorded:[],captureUrl:null,micStream:null,micContext:null,micFrame:null,timerLeft:2700,speakLeft:120,povLeft:60,entries:JSON.parse(localStorage.getItem('omt-live-journal')||'[]')};
+
+const prompts={1:[['Do you enjoy learning new skills?','Give reasons and a brief example.'],['What do you usually do to relax?','Explain when and why.'],['Do you prefer learning alone or with others?','Compare your preferences.']],2:[['Describe a skill you learned that has been useful in your life.','You should say what the skill is, how you learned it, and explain why it has been useful.'],['Describe a video that taught you how to do something.','Say what it demonstrated, what you learned, and whether you used the technique.'],['Describe a time you explained an idea to another person.','Say what the idea was, who you spoke to, and how the conversation went.']],3:[['How has online learning changed the way people develop skills?','Consider access, attention and feedback.'],['Should schools teach creativity as a practical skill?','Discuss possible benefits and limitations.'],['Why do some people learn more effectively by observing others?','Consider imitation, modeling and independent practice.']]};
+const povs=['Does technology make people more independent, or more dependent?','Should people prioritize being understood or being persuasive?','Can watching someone perform a skill be as valuable as direct instruction?','Does social media encourage creativity or imitation?','Is confidence something you build privately or demonstrate publicly?','Should schools reward experimentation even when the result is imperfect?'];
+function setXP(n,type){if(window.OMTApp)window.OMTApp.award(type||'prompt_done',{points:n})}
+
+function saveEntry(type,title,notes){const entry={id:Date.now(),date:new Date().toISOString(),type,title,notes};state.entries.unshift(entry);localStorage.setItem('omt-live-journal',JSON.stringify(state.entries));renderJournal();return entry}
+function renderJournal(){const host=$('journalList');host.innerHTML='';if(!state.entries.length){host.innerHTML='<p class="muted small">No saved sessions yet.</p>';return}state.entries.forEach(e=>{const el=document.createElement('div');el.className='journalitem';const d=new Date(e.date);const h=document.createElement('strong');h.textContent=e.type+' · '+e.title+' · '+d.toLocaleString();const p=document.createElement('p');p.textContent=e.notes||'No notes';el.append(h,p);host.append(el)})}renderJournal();$('exportJournal').onclick=()=>{const blob=new Blob([JSON.stringify(state.entries,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='omt-live-journal.json';a.click();URL.revokeObjectURL(a.href)};
+async function refreshMics(){try{const devices=await navigator.mediaDevices.enumerateDevices();const inputs=devices.filter(d=>d.kind==='audioinput');$('micSelect').innerHTML='<option value="">Default microphone</option>'+inputs.map((d,i)=>'<option value="'+d.deviceId+'">'+(d.label||'Microphone '+(i+1))+'</option>').join('')}catch(e){}}
+if(navigator.mediaDevices?.addEventListener)navigator.mediaDevices.addEventListener('devicechange',refreshMics);refreshMics();
+$('micTest').onclick=async()=>{try{if(!window.isSecureContext){$('micStatus').textContent='This page is not in a secure context. Open it through HTTPS or localhost to test microphone access.';$('micStatus').className='callout bad';return}if(!navigator.mediaDevices?.getUserMedia){$('micStatus').textContent='This browser does not expose microphone capture here.';$('micStatus').className='callout bad';return}const id=$('micSelect').value;state.micStream=await navigator.mediaDevices.getUserMedia({audio:id?{deviceId:{exact:id}}:true});const AudioCtx=window.AudioContext||window.webkitAudioContext;state.micContext=new AudioCtx();const source=state.micContext.createMediaStreamSource(state.micStream);const analyser=state.micContext.createAnalyser();analyser.fftSize=512;source.connect(analyser);const data=new Uint8Array(analyser.frequencyBinCount);const tick=()=>{if(!state.micStream)return;analyser.getByteTimeDomainData(data);let sum=0;for(let i=0;i<data.length;i++){const v=(data[i]-128)/128;sum+=v*v}const rms=Math.sqrt(sum/data.length);$('micLevel').style.width=Math.min(100,Math.max(2,rms*350))+'%';state.micFrame=requestAnimationFrame(tick)};tick();$('micStatus').textContent='Browser microphone access granted. Speak and watch the meter. This confirms local capture only.';$('micStatus').className='callout good';$('micStop').disabled=false;$('micTest').disabled=true;await refreshMics()}catch(e){$('micStatus').textContent='Microphone test failed: '+e.name+' — '+e.message+'. Check this site’s Chrome microphone permission, Windows microphone privacy and selected input.';$('micStatus').className='callout bad'}};
+function stopMic(){if(state.micFrame)cancelAnimationFrame(state.micFrame);state.micFrame=null;if(state.micStream)state.micStream.getTracks().forEach(t=>t.stop());state.micStream=null;if(state.micContext)state.micContext.close();state.micContext=null;$('micLevel').style.width='0';$('micStop').disabled=true;$('micTest').disabled=false}$('micStop').onclick=stopMic;
+function fmt(n){return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')}function runTimer(key,display,button){if(state[key+'_interval']){clearInterval(state[key+'_interval']);state[key+'_interval']=null;button.textContent='Resume';return}button.textContent='Pause';state[key+'_interval']=setInterval(()=>{state[key]=Math.max(0,state[key]-1);$(display).textContent=fmt(state[key]);if(state[key]===0){clearInterval(state[key+'_interval']);state[key+'_interval']=null;button.textContent='Start';}},1000)}
+$('timerStart').onclick=()=>runTimer('timerLeft','timerDisplay',$('timerStart'));$('timerReset').onclick=()=>{clearInterval(state.timerLeft_interval);state.timerLeft_interval=null;state.timerLeft=2700;$('timerDisplay').textContent='45:00';$('timerStart').textContent='Start'};$('speakTimer').onclick=()=>runTimer('speakLeft','speakTimerDisplay',$('speakTimer'));
+let part=2,pi=0;function renderPrompt(){const p=prompts[part][pi%prompts[part].length];$('partNum').textContent=part;$('ieltsPrompt').textContent=p[0];$('ieltsHint').textContent=p[1];document.querySelectorAll('[data-part]').forEach(b=>b.classList.toggle('active',Number(b.dataset.part)===part))}document.querySelectorAll('[data-part]').forEach(b=>b.onclick=()=>{part=Number(b.dataset.part);pi=0;renderPrompt()});$('nextPrompt').onclick=()=>{pi++;renderPrompt()};$('rateAnswer').onclick=()=>{setXP(5,'prompt_done');$('fluencyScore').textContent='✓';$('lexisScore').textContent='✓';$('grammarScore').textContent='✓';$('pronScore').textContent='✓'};$('savePronounz').onclick=()=>{saveEntry('Pronounz practice',$('ieltsPrompt').textContent,$('answerNotes').value);setXP(5,'language_practice')};renderPrompt();
+let povIndex=0;function nextPov(){$('povPrompt').textContent=povs[povIndex++%povs.length]}$('nextPov').onclick=nextPov;$('povRound').onclick=()=>runTimer('povLeft','povTimer',$('povRound'));$('savePov').onclick=()=>{saveEntry('POV Talks',$('povPrompt').textContent,$('povPosition').value);setXP(10,'prompt_done')};
+let refUrl=null;function releaseRef(){if(refUrl){URL.revokeObjectURL(refUrl);refUrl=null}}$('referenceFile').onchange=()=>{const f=$('referenceFile').files[0];releaseRef();if(!f)return;refUrl=URL.createObjectURL(f);$('referenceBox').innerHTML='';const v=document.createElement('video');v.src=refUrl;v.controls=true;v.playsInline=true;$('referenceBox').append(v)};$('openReference').onclick=()=>{const url=$('referenceUrl').value.trim();if(!url)return;try{const u=new URL(url);if(!['http:','https:'].includes(u.protocol))throw new Error('Only web links are supported');window.open(u.href,'_blank','noopener,noreferrer')}catch(e){alert('Enter a valid http or https link.')}};
+$('creativeXP').onclick=()=>{saveEntry('Creative Lab',$('skillLens').value+' · Watch → Notice → Try → Create',[$('noticeNotes').value,$('tryNotes').value,$('createNotes').value].filter(Boolean).join('\n\n'));setXP(20,'challenge')};$('saveCreative').onclick=()=>{saveEntry('Creative Lab notes',$('skillLens').value,[$('noticeNotes').value,$('tryNotes').value,$('createNotes').value].filter(Boolean).join('\n\n'));$('captureStatus').textContent='Creative Lab notes saved locally.'};
+$('startCapture').onclick=async()=>{try{state.stream=await navigator.mediaDevices.getUserMedia({video:true,audio:true});$('captureBox').innerHTML='';const v=document.createElement('video');v.autoplay=true;v.muted=true;v.playsInline=true;v.srcObject=state.stream;$('captureBox').append(v);$('recordCapture').disabled=false;$('captureStatus').textContent='Camera and microphone ready. Recording starts only when you press Start recording.'}catch(e){$('captureStatus').textContent='Capture unavailable: '+e.name+' — '+e.message+'. Check browser permissions and HTTPS.'}};
+$('recordCapture').onclick=()=>{if(!state.stream)return;state.recorded=[];const mime=['video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/webm'].find(t=>MediaRecorder.isTypeSupported(t));state.recorder=new MediaRecorder(state.stream,mime?{mimeType:mime}:{});state.recorder.ondataavailable=e=>{if(e.data.size)state.recorded.push(e.data)};state.recorder.onstop=()=>{const blob=new Blob(state.recorded,{type:state.recorder.mimeType||'video/webm'});if(state.captureUrl)URL.revokeObjectURL(state.captureUrl);state.captureUrl=URL.createObjectURL(blob);$('downloadCapture').href=state.captureUrl;$('downloadCapture').classList.remove('hidden');$('captureStatus').textContent='Your recording is ready. Download it for private review.'};state.recorder.start();$('recordCapture').disabled=true;$('stopCapture').disabled=false;$('captureStatus').textContent='Recording locally…'};
+$('stopCapture').onclick=()=>{if(state.recorder&&state.recorder.state!=='inactive')state.recorder.stop();if(state.stream)state.stream.getTracks().forEach(t=>t.stop());state.stream=null;$('stopCapture').disabled=true;$('recordCapture').disabled=true;$('captureStatus').textContent='Finishing recording…'};
+window.OMTApp=window.OMTApp||{};window.OMTApp.saveEntry=saveEntry;window.OMTApp.renderJournal=renderJournal;window.OMTApp.stopMic=stopMic;
+window.addEventListener('beforeunload',()=>{stopMic();if(state.stream)state.stream.getTracks().forEach(t=>t.stop());releaseRef()});
+})();
+</script>
+<script>(function(){
+/* OMT Live v0.2 UI — part 1: utilities, storage, profile, progress, navigation, home, create/join */
+const C = window.OMTCore, $ = id => document.getElementById(id);
+const store = { get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } } };
+function put(parent, kids) { kids.flat(Infinity).forEach(k => { if (k == null || k === false) return; parent.append(k instanceof Node ? k : document.createTextNode(String(k))); }); }
+function h(tag, props, ...kids) {
+  const e = document.createElement(tag);
+  for (const k in props || {}) { const v = props[k]; if (v == null || v === false) continue; if (k === 'class') e.className = v; else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else if (k === 'value') e.value = v; else e.setAttribute(k, v === true ? '' : v); }
+  put(e, kids); return e;
+}
+function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); return el; }
+function toast(msg, err) { const t = h('div', { class: 'toast' + (err ? ' err' : ''), role: 'status' }, msg); document.body.append(t); setTimeout(() => t.remove(), err ? 6000 : 3200); }
+function download(name, text, type) { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: type || 'application/json' })); a.download = name; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); }
+async function copyText(t) { try { await navigator.clipboard.writeText(t); return true; } catch (e) { const ta = h('textarea', { style: 'position:fixed;left:-999px' }); ta.value = t; document.body.append(ta); ta.select(); let ok = false; try { ok = document.execCommand('copy'); } catch (x) { } ta.remove(); return ok; } }
+function modal(title, body, buttons, opts) {
+  opts = opts || {}; const root = $('modalRoot');
+  const back = h('div', { class: 'modalback', role: 'dialog', 'aria-modal': 'true' });
+  const box = h('div', { class: 'modal' }, h('h3', null, title), body, h('div', { class: 'row', style: 'margin-top:14px;justify-content:flex-end' }, (buttons || []).map(b => h('button', { class: b.primary ? 'primary' : (b.ghost ? 'ghost' : ''), onclick: () => { const r = b.onclick ? b.onclick(close) : undefined; if (r !== false && !b.keep) close(); } }, b.label))));
+  back.append(box); if (!opts.sticky) back.addEventListener('click', e => { if (e.target === back) close(); });
+  root.append(back); function close() { back.remove(); if (opts.onclose) opts.onclose(); } return close;
+}
+
+/* ---------- profile, progress, social (all browser-local) ---------- */
+const AVATARS = ['🦊', '🐙', '🦉', '🐢', '🎤', '🎧', '🌊', '🔥', '🌙', '🚀', '🎷', '🦄'];
+const INTERESTS = ['Rap', 'Songwriting', 'Storytelling', 'Debate', 'Poetry', 'Beatmaking', 'Languages', 'Pronunciation', 'IELTS', 'Improv', 'Visual art'];
+const REACTS = ['👏', '🔥', '😂', '❤️', '🤯', '🎯', '🙌', '💡'];
+let profile = Object.assign({ uid: C.randId('u_', 10), name: '', avatar: '🦊', langs: '', bio: '', interests: [], share: 'card' }, store.get('omt2-profile', {}));
+store.set('omt2-profile', profile);
+let prog = store.get('omt2-progress', null) || C.newProgress();
+let friends = store.get('omt2-friends', {}), inbox = store.get('omt2-inbox', []), blocked = store.get('omt2-blocked', {}), reports = store.get('omt2-reports', []);
+let sessionsLog = store.get('omt2-sessions', []);
+const myName = () => (profile.name || '').trim() || ('Guest ' + profile.uid.slice(-3));
+function myCard() {
+  if (profile.share === 'anon') return { uid: profile.uid, name: myName(), avatar: '🙂', bio: '', langs: '' };
+  if (profile.share === 'full') return { uid: profile.uid, name: myName(), avatar: profile.avatar, bio: profile.bio, langs: profile.langs };
+  return { uid: profile.uid, name: myName(), avatar: profile.avatar, bio: '', langs: '' };
+}
+function award(type, o) {
+  const r = C.award(prog, type, o); store.set('omt2-progress', prog); updateBadge();
+  r.newAch.forEach(a => toast('🏅 ' + a.emoji + ' ' + a.title + ' — ' + a.desc)); return r;
+}
+function updateBadge() { $('xpBadge').textContent = '✦ ' + prog.points + ' Points'; }
+window.OMTApp = window.OMTApp || {}; window.OMTApp.award = (type, o) => award(type, o);
+
+/* ---------- navigation ---------- */
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.toggle('hidden', p.id !== 'page-' + name));
+  document.querySelectorAll('.navbtn').forEach(b => b.classList.toggle('active', b.dataset.page === name));
+  if (name === 'progress') renderProgress(); if (name === 'profile') renderProfile(); if (name === 'home') renderHome();
+  if (name === 'journal' && window.OMTApp.renderJournal) window.OMTApp.renderJournal();
+  window.scrollTo(0, 0);
+}
+document.querySelectorAll('.navbtn').forEach(b => b.addEventListener('click', () => showPage(b.dataset.page)));
+document.addEventListener('click', e => { const g = e.target.closest && e.target.closest('[data-go]'); if (g) showPage(g.dataset.go); });
+
+/* ---------- home ---------- */
+function renderHome() {
+  const g = clear($('cats'));
+  C.CATEGORIES.forEach(c => g.append(h('div', { class: 'cat' }, h('div', { class: 'em' }, c.emoji), h('h4', null, c.name), h('p', null, c.tagline),
+    h('div', { class: 'row between' }, h('span', { class: 'small muted' }, 'up to ' + c.max + ' · ' + c.mins + ' min'), h('button', { class: 'primary', 'data-cat': c.id, onclick: () => openCreate(c.id) }, 'Host this')))));
+  const rc = clear($('recent'));
+  if (!sessionsLog.length) rc.append(h('p', { class: 'muted small' }, 'Nothing yet. Finished sessions are listed here with their exports.'));
+  sessionsLog.slice(0, 6).forEach(s => {
+    const cat = C.CATEGORIES.find(c => c.id === s.cat) || { emoji: '', name: s.cat };
+    rc.append(h('div', { class: 'journalitem' }, h('strong', null, cat.emoji + ' ' + cat.name + (s.topic ? ' — ' + s.topic : '') + ' · ' + new Date(s.startedAt).toLocaleString()),
+      h('p', null, (s.participants || []).length + ' other participant(s) · ' + (s.prompts || []).length + ' prompt(s) · ' + (s.durationMin || 0) + ' min'),
+      h('div', { class: 'row', style: 'margin-top:6px' }, h('button', { onclick: () => download('omt-session-' + s.id + '.library-bundle.json', JSON.stringify(C.buildBundle(C.buildSessionAssets(s)), null, 2)) }, 'Export for Library'),
+        h('button', { onclick: () => download('omt-session-' + s.id + '.md', C.sessionMarkdown(s), 'text/markdown') }, 'Summary (.md)'),
+        h('button', { class: 'ghost', onclick: () => openCreate(s.cat, { topic: s.topic, level: s.level, lang: s.lang, mins: s.durationMin }) }, 'Host again'))));
+  });
+}
+function openCreate(catId, pre) {
+  pre = pre || {}; const cat = C.CATEGORIES.find(c => c.id === catId) || C.CATEGORIES[10];
+  const f = {
+    topic: h('input', { id: 'cTopic', maxlength: '120', placeholder: 'Optional — e.g. “City nights”', value: pre.topic || '' }),
+    level: h('select', { id: 'cLevel' }, C.LEVELS.map(l => h('option', { value: l, selected: l === (pre.level || 'Any level') }, l))),
+    lang: h('input', { id: 'cLang', maxlength: '30', value: pre.lang || 'English' }),
+    mins: h('input', { id: 'cMins', type: 'number', min: '5', max: '180', value: String(pre.mins || cat.mins) }),
+    mode: h('select', { id: 'cMode' }, h('option', { value: 'one' }, 'Two people (1:1)'), h('option', { value: 'group', selected: true }, 'Group')),
+    max: h('input', { id: 'cMax', type: 'number', min: '2', max: '12', value: String(cat.max) }),
+    lobby: h('input', { id: 'cLobby', type: 'checkbox', style: 'width:auto' }),
+    host: h('input', { id: 'cHost', maxlength: '40', value: myName() })
+  };
+  const warn = location.protocol === 'file:' ? h('div', { class: 'notice', style: 'margin-bottom:10px' }, 'This page is open from a file on your computer. Links to it will not work for other people, and camera/microphone need HTTPS. Put the page on a web address first (see README: GitHub Pages is free).') : null;
+  const body = h('div', null, h('p', { class: 'small muted' }, cat.emoji + ' ' + cat.name), warn,
+    h('div', { class: 'field' }, h('label', { for: 'cTopic' }, 'Topic'), f.topic),
+    h('div', { class: 'fieldrow' }, h('div', { class: 'field' }, h('label', { for: 'cLevel' }, 'Level'), f.level), h('div', { class: 'field' }, h('label', { for: 'cLang' }, 'Language'), f.lang)),
+    h('div', { class: 'fieldrow' }, h('div', { class: 'field' }, h('label', { for: 'cMins' }, 'Planned minutes'), f.mins), h('div', { class: 'field' }, h('label', { for: 'cMode' }, 'Format'), f.mode)),
+    h('div', { class: 'fieldrow' }, h('div', { class: 'field' }, h('label', { for: 'cMax' }, 'Participant limit (group)'), f.max), h('div', { class: 'field' }, h('label', { for: 'cHost' }, 'Your name'), f.host)),
+    h('label', { class: 'row', style: 'color:var(--text);font-size:13px' }, f.lobby, 'Waiting room: I approve people before they enter'));
+  modal('Host a session', body, [{ label: 'Cancel', ghost: true }, { label: 'Create room', primary: true, onclick: async () => {
+    if (!profile.name && f.host.value.trim()) { profile.name = f.host.value.trim().slice(0, 40); store.set('omt2-profile', profile); }
+    const kp = await C.newHostKeypair();
+    const cfg = C.cleanSession({ room: C.newRoomCode(), cat: cat.id, topic: f.topic.value, level: f.level.value, lang: f.lang.value, mins: f.mins.value, mode: f.mode.value, max: f.max.value, lobby: f.lobby.checked, hostName: f.host.value, hp: kp.pub });
+    store.set('omt2-host-' + cfg.room, { priv: kp.priv, pub: kp.pub, at: Date.now() });
+    enterRoom(cfg, { host: true, priv: kp.priv });
+  } }]);
+}
+function parseJoin(text) {
+  text = String(text || '').trim(); const cfg = C.decodeInvite(text); if (cfg) return { cfg };
+  const m = text.toUpperCase().match(/OMT-[A-Z0-9]{4}-[A-Z0-9]{4}/);
+  if (m) return { cfg: C.cleanSession({ room: m[0], cat: 'open', mode: 'group', hostName: '' }), codeOnly: true };
+  return null;
+}
+function showJoinBanner(j) {
+  const cfg = j.cfg, cat = C.CATEGORIES.find(c => c.id === cfg.cat), b = clear($('joinbanner')); b.classList.remove('hidden');
+  const name = h('input', { id: 'jName', maxlength: '40', value: myName(), style: 'max-width:260px' });
+  b.append(h('h3', null, j.codeOnly ? 'Join room ' + cfg.room : 'You are invited: ' + cat.emoji + ' ' + cat.name),
+    h('p', { class: 'small muted' }, j.codeOnly ? 'Joined by code only: video works, but the host\'s shared prompts and timer need the full invite link (it carries the key that protects host controls). You can also trust the host manually inside the room.' : (cfg.topic ? 'Topic: ' + cfg.topic + ' · ' : '') + 'Level: ' + cfg.level + ' · Language: ' + cfg.lang + ' · Host: ' + (cfg.hostName || '—') + ' · ' + (cfg.mode === 'one' ? '1:1' : 'up to ' + cfg.max)),
+    h('div', { class: 'row' }, h('div', null, h('label', { for: 'jName' }, 'Your name'), name), h('button', { class: 'primary', onclick: () => { if (!profile.name) { profile.name = name.value.trim().slice(0, 40); store.set('omt2-profile', profile); } enterRoom(cfg, { host: false, codeOnly: !!j.codeOnly }); } }, 'Open room'), h('button', { class: 'ghost', onclick: () => b.classList.add('hidden') }, 'Dismiss')));
+}
+$('joinBtn').addEventListener('click', () => { const j = parseJoin($('joinInput').value); if (!j) { $('joinMsg').textContent = 'That does not look like an OMT invite link or room code.'; return; } $('joinMsg').textContent = ''; showJoinBanner(j); });
+$('joinInput').addEventListener('keydown', e => { if (e.key === 'Enter') $('joinBtn').click(); });
+$('soloBtn').addEventListener('click', () => enterSolo()); $('soloBtn2').addEventListener('click', () => enterSolo());
+
+/* ---------- progress page ---------- */
+function renderProgress() {
+  $('ptsBig').textContent = '✦ ' + prog.points;
+  const g = clear($('achGrid')); C.ACHIEVEMENTS.forEach(a => g.append(h('div', { class: 'achc' + (prog.ach[a.id] ? ' got' : '') }, h('div', { class: 'em' }, a.emoji), h('strong', null, a.title), h('div', { class: 'small muted' }, a.desc), prog.ach[a.id] ? h('div', { class: 'small', style: 'color:var(--gold)' }, 'Unlocked ' + prog.ach[a.id].slice(0, 10)) : null)));
+  const ev = clear($('evList')); const rows = prog.events.filter(e => e.pts).slice(-20).reverse();
+  if (!rows.length) ev.append('No points yet. Join a session or practise a prompt.'); rows.forEach(e => ev.append(h('div', null, new Date(e.at).toLocaleString() + ' · ' + e.type.replace(/_/g, ' ') + ' · +' + e.pts)));
+}
+$('exportProgress').addEventListener('click', () => download('omt-progress.json', JSON.stringify(prog, null, 2)));
+
+/* OMT Live v0.2 UI — part 2: room lifecycle, Jitsi, room protocol, prompt/timer/turns, reactions */
+let R = null;
+const TABS = [['prompt', '🎯 Prompt'], ['studio', '🎼 Studio'], ['record', '🎙 Record'], ['people', '👥 People'], ['notes', '📝 Notes']];
+const jitsiDomain = () => { const d = store.get('omt2-jitsi-domain', 'meet.jit.si'); return /^[a-z0-9.-]{3,80}$/i.test(d) ? d : 'meet.jit.si'; };
+const catOf = id => C.CATEGORIES.find(c => c.id === id) || C.CATEGORIES[10];
+
+function newRoomState(cfg, o) {
+  return { cfg, isHost: !!o.host, priv: o.priv || null, solo: !!o.solo, codeOnly: !!o.codeOnly, api: null, joined: false, selfId: null, peers: new Map(), seen: {}, blocked: new Set(Object.keys(blocked)),
+    prompt: null, promptParams: { type: catOf(cfg.cat).types[0], difficulty: 'medium', theme: '', seconds: 0 }, promptLog: [], localPrompt: null,
+    timer: { total: 0, left: 0, running: false, endAt: 0, iv: null }, turn: { order: [], index: 0, on: false }, verse: C.newVerse(), verses: [], verseAwarded: {}, tab: 'prompt',
+    consent: null, consentModal: {}, rec: null, remoteRec: {}, reactions: 0, startedAt: null, lastSeq: 0, seq: 0, speaking: null, knocking: [], takes: 0, notes: '', takeList: [], ended: false };
+}
+function enterSolo() {
+  const cfg = C.cleanSession({ room: 'solo-' + C.randId('', 6), cat: 'open', mode: 'one', topic: 'Solo practice', hostName: myName() });
+  R && leaveCleanup(); R = newRoomState(cfg, { host: true, solo: true }); showPage('room'); startSession();
+}
+function enterRoom(cfg, o) {
+  R && leaveCleanup(); R = newRoomState(cfg, o || {}); showPage('room');
+  $('roomEmpty').classList.add('hidden'); $('roomLive').classList.remove('hidden'); renderHead(); $('roomgrid').classList.remove('solo'); $('mobseg').style.display = '';
+  $('videoCol').classList.remove('hidden'); $('roomgrid').dataset.view = 'video'; renderReacts(); renderPrejoin(); renderTabs();
+}
+function inviteLink() { return location.href.split('#')[0] + '#j=' + C.encodeInvite(R.cfg); }
+function renderHead() {
+  const c = catOf(R.cfg.cat); $('rhCat').textContent = c.emoji + ' ' + c.name; $('rhTitle').textContent = R.cfg.topic || (R.solo ? 'Solo practice' : c.name);
+  $('rhMeta').textContent = R.solo ? 'Practising on your own · nothing is shared' : (R.cfg.mode === 'one' ? '1:1' : 'up to ' + R.cfg.max) + ' · ' + R.cfg.level + ' · ' + R.cfg.lang + ' · ' + R.cfg.mins + ' min · Room ' + R.cfg.room;
+  const a = clear($('rhActions'));
+  if (!R.solo) a.append(h('button', { id: 'copyInvite', onclick: async () => { toast(await copyText(inviteLink()) ? 'Invite link copied' : 'Could not copy — select the link in People tab', true); } }, '🔗 Copy invite'));
+  a.append(h('button', { id: 'leaveBtn', class: R.isHost && !R.solo ? '' : 'ghost', onclick: () => finishSession(R.isHost && !R.solo ? 'end' : 'leave') }, R.solo ? 'Finish' : (R.isHost ? 'End session' : 'Leave')));
+}
+function renderPrejoin() {
+  const p = clear($('prejoin')), cfg = R.cfg; $('meeting').classList.add('hidden');
+  const nameI = h('input', { id: 'pjName', maxlength: '40', value: myName() }), cam = h('input', { id: 'pjCam', type: 'checkbox', checked: true, style: 'width:auto' }), mic = h('input', { id: 'pjMic', type: 'checkbox', checked: true, style: 'width:auto' });
+  const dom = h('input', { id: 'pjDom', value: jitsiDomain() });
+  p.append(h('div', { class: 'inner', style: 'padding:6px' }, h('h3', null, R.isHost ? 'Your room is ready' : 'Ready to join?'),
+    R.isHost ? h('div', null, h('p', { class: 'small muted' }, 'Send this link to the people you want in the room. Anyone with the link can ask to join' + (cfg.lobby ? ' (you approve them first).' : '.')), h('div', { class: 'row' }, h('input', { readonly: true, value: inviteLink(), style: 'flex:1;min-width:200px', id: 'pjLink', onfocus: e => e.target.select() }), h('button', { onclick: async () => toast(await copyText(inviteLink()) ? 'Copied' : 'Select and copy the link', false) }, 'Copy')), navigator.share ? h('button', { style: 'margin-top:6px', onclick: () => navigator.share({ title: 'OMT session', url: inviteLink() }).catch(() => { }) }, 'Share…') : null, h('p', { class: 'small muted' }, 'Room code: ' + cfg.room)) : null,
+    h('div', { class: 'field' }, h('label', { for: 'pjName' }, 'Your name in the room'), nameI),
+    h('div', { class: 'row' }, h('label', { class: 'row', style: 'color:var(--text)' }, cam, '📹 Camera on'), h('label', { class: 'row', style: 'color:var(--text)' }, mic, '🎤 Microphone on')),
+    h('div', { class: 'callout', style: 'margin:10px 0' }, 'Recording is off. OMT never records unless every person in the room agrees, and a red banner shows the whole time. Video and audio run through Jitsi (a third-party service); OMT does not store them. Adults 18+.'),
+    h('div', { class: 'row' }, h('button', { class: 'primary', id: 'joinNow', onclick: () => { if (nameI.value.trim() && !profile.name) { profile.name = nameI.value.trim().slice(0, 40); store.set('omt2-profile', profile); } R.camOn = cam.checked; R.micOn = mic.checked; startSession(); } }, R.isHost ? 'Start room' : 'Join now'),
+      h('button', { class: 'ghost', onclick: () => { R.camOn = false; R.micOn = false; startSession(true); } }, 'Continue without video')),
+    h('details', { class: 'adv' }, h('summary', null, 'Advanced: video server'), h('p', { class: 'small muted' }, 'Default is Jitsi’s public server. Use your own Jitsi / JaaS domain here if the public one limits embedded rooms.'), h('div', { class: 'row' }, dom, h('button', { onclick: () => { store.set('omt2-jitsi-domain', dom.value.trim()); toast('Saved'); } }, 'Save'), h('button', { class: 'ghost', onclick: () => window.open('https://' + jitsiDomain() + '/omt-' + cfg.room.toLowerCase(), '_blank', 'noopener') }, 'Open this room in a Jitsi tab instead')))));
+  $('vidctl').replaceChildren();
+}
+function setStatus(t) { $('roomStatus').textContent = t || ''; }
+
+/* ---------- starting the session ---------- */
+async function startSession(noVideo) {
+  R.startedAt = new Date().toISOString(); R.started = true;
+  if (R.solo || noVideo) {
+    $('prejoin').replaceChildren(); $('meeting').classList.add('hidden');
+    if (R.solo) { $('roomEmpty').classList.add('hidden'); $('roomLive').classList.remove('hidden'); renderHead(); renderReacts(); $('roomgrid').classList.add('solo'); $('videoCol').classList.add('hidden'); $('mobseg').style.display = 'none'; $('roomgrid').dataset.view = 'act'; }
+    else { $('prejoin').append(h('div', { class: 'callout' }, 'Video is off. You can still use prompts, studio and notes here. Others in the room will not see you.')); }
+    R.joined = true; award(R.solo ? 'session_host' : (R.isHost ? 'session_host' : 'session_join'), { ref: R.cfg.room });
+    if (R.isHost) setPromptFromParams(R.promptParams, true);
+    renderTabs(); renderPeople(); return;
+  }
+  $('prejoin').replaceChildren(h('p', { class: 'muted small', style: 'padding:10px' }, 'Connecting to video…'));
+  try { await loadJitsi(jitsiDomain()); } catch (e) {
+    $('prejoin').replaceChildren(h('div', { class: 'notice' }, 'Could not load the video service (' + e.message + '). Check your connection, or try another video server under “Advanced”. You can continue without video.'), h('div', { class: 'row', style: 'margin-top:8px' }, h('button', { onclick: renderPrejoin }, 'Back'), h('button', { class: 'primary', onclick: () => startSession(true) }, 'Continue without video'))); return;
+  }
+  $('prejoin').replaceChildren(); const m = $('meeting'); m.classList.remove('hidden', 'empty'); clear(m);
+  let api; try {
+    api = new window.JitsiMeetExternalAPI(jitsiDomain(), { roomName: 'omt-' + R.cfg.room.toLowerCase(), parentNode: m, width: '100%', height: '100%', userInfo: { displayName: myName() },
+      configOverwrite: { prejoinConfig: { enabled: false }, prejoinPageEnabled: false, disableDeepLinking: true, startWithAudioMuted: R.micOn === false, startWithVideoMuted: R.camOn === false, subject: R.cfg.topic || catOf(R.cfg.cat).name },
+      interfaceConfigOverwrite: { MOBILE_APP_PROMO: false, SHOW_JITSI_WATERMARK: false } });
+  } catch (e) { toast('Video failed to start: ' + e.message, true); return; }
+  R.api = api; bindJitsi(api); setStatus('Connecting…');
+  $('vidctl').append(h('span', { class: 'small muted' }, 'Camera, microphone and screen share are in the video toolbar.'), h('button', { class: 'ghost', onclick: () => window.open('https://' + jitsiDomain() + '/omt-' + R.cfg.room.toLowerCase(), '_blank', 'noopener') }, 'Video not working? Open in a tab'));
+  renderTabs();
+}
+function loadJitsi(domain) {
+  return new Promise((res, rej) => {
+    if (window.JitsiMeetExternalAPI) return res();
+    const s = document.createElement('script'); s.src = 'https://' + domain + '/external_api.js'; s.async = true;
+    s.onload = () => window.JitsiMeetExternalAPI ? res() : rej(new Error('API missing')); s.onerror = () => rej(new Error('could not reach ' + domain)); document.head.append(s);
+    setTimeout(() => { if (!window.JitsiMeetExternalAPI) rej(new Error('timed out')); }, 15000);
+  });
+}
+function peerOf(id) { let p = R.peers.get(id); if (!p) { p = { id, name: 'Guest', uid: null, avatar: '🙂', bio: '', langs: '', hk: '', greeted: false, host: false }; R.peers.set(id, p); } return p; }
+function bindJitsi(api) {
+  const on = (ev, fn) => { try { api.addListener(ev, fn); } catch (e) { } };
+  on('videoConferenceJoined', e => {
+    R.selfId = e && e.id; R.joined = true; setStatus('In the room'); award(R.isHost ? 'session_host' : 'session_join', { ref: R.cfg.room });
+    R.peers.forEach(p => sendHello(p.id)); if (R.isHost) { if (R.cfg.lobby) try { api.executeCommand('toggleLobby', true); } catch (x) { } setPromptFromParams(R.promptParams, true); }
+    renderPeople();
+  });
+  on('participantJoined', e => { if (!e || !e.id) return; const p = peerOf(e.id); if (e.displayName) p.name = e.displayName; sendHello(e.id); onPresence(e.id); toast((p.name || 'Someone') + ' joined'); renderPeople(); });
+  on('participantLeft', e => { if (!e) return; const p = R.peers.get(e.id); if (p) { R.seen[p.uid || p.id] = p; toast(p.name + ' left'); } R.peers.delete(e.id); delete R.remoteRec[e.id]; renderRecBanner(); onPresence(); renderPeople(); });
+  on('displayNameChange', e => { const p = R.peers.get(e && e.id); if (p && e.displayname) { p.name = e.displayname; renderPeople(); } });
+  on('dominantSpeakerChanged', e => { R.speaking = e && e.id; renderPeople(); const p = R.peers.get(R.speaking); setStatus(R.speaking === R.selfId || !p ? '' : '🔊 ' + p.name); });
+  on('endpointTextMessageReceived', onText);
+  on('knockingParticipant', e => { const k = e && e.participant; if (!k || !R.isHost) return; if (!R.knocking.some(x => x.id === k.id)) R.knocking.push({ id: k.id, name: String(k.name || 'Guest').slice(0, 40) }); toast((k.name || 'Someone') + ' is waiting to enter'); renderPeople(); });
+  on('readyToClose', () => finishSession('leave'));
+}
+function sendHello(toId) { sendMsg('hello', { name: myName(), uid: profile.uid, avatar: myCard().avatar, bio: myCard().bio, langs: myCard().langs, hk: R.isHost ? R.cfg.hp : '', host: R.isHost }, toId); }
+function nextSeq() { R.seq = Math.max(Date.now(), R.seq + 1); return R.seq; }
+async function sendMsg(type, payload, toId) {
+  if (!R || !R.api || !R.joined) return; let text;
+  try { if (C.HOST_ONLY.has(type)) { if (!R.isHost || !R.priv) return; text = await C.encodeSigned(type, payload, R.priv, nextSeq()); } else text = C.encode(type, payload); } catch (e) { return; }
+  (toId ? [toId] : Array.from(R.peers.keys())).forEach(id => { try { R.api.executeCommand('sendEndpointTextMessage', id, text); } catch (e) { } });
+}
+async function onText(ev) {
+  if (!R) return; const d = ev && ev.data ? ev.data : (ev || {}); const from = (d.senderInfo && (d.senderInfo.id || d.senderInfo.jid)) || d.from; const text = d.eventData ? d.eventData.text : d.text;
+  if (typeof text !== 'string') return; const m = C.decode(text); if (!m) return;
+  const peer = R.peers.get(from); if (peer && peer.uid && R.blocked.has(peer.uid)) return;
+  if (m.hostOnly) { if (R.isHost || !R.cfg.hp) return; const v = await C.verifySigned(text, R.cfg.hp, R.lastSeq); if (!v.ok) return; R.lastSeq = Math.max(R.lastSeq, v.seq); }
+  if (!R) return; applyMsg(m.type, m.payload, from);
+}
+function applyMsg(type, p, from) {
+  const peer = peerOf(from);
+  switch (type) {
+    case 'hello': {
+      const first = !peer.uid; Object.assign(peer, { name: p.name || peer.name, uid: p.uid, avatar: p.avatar || '🙂', bio: p.bio, langs: p.langs, hk: p.hk, host: p.host && !!p.hk && p.hk === R.cfg.hp, claimsHost: p.host });
+      R.seen[p.uid] = peer; if (!peer.greeted) { peer.greeted = true; sendHello(from); }
+      if (R.blocked.has(p.uid)) toast(p.name + ' is on your block list. Their messages are hidden.');
+      if (R.isHost && first) sendState(from); if (R.consent && R.consent.state === 'pending') sendMsg('recreq', { id: R.consent.id, name: myName() }, from);
+      onPresence(); renderPeople(); break; }
+    case 'state': applyState(p); break;
+    case 'tab': switchTab(p.tab); break;
+    case 'prompt': setPromptFromParams(p.prompt, false); break;
+    case 'timer': timerApply(p.action, p.seconds); break;
+    case 'turn': R.turn = p.turn; renderTabBody(); break;
+    case 'react': R.reactions++; floatEmoji(p.e, peer.name); break;
+    case 'verseop': C.applyVerseOp(R.verse, p.op); verseProgress(); paintVerse(); break;
+    case 'recreq': askConsentModal(p, from, peer); break;
+    case 'recresp': if (R.consent && R.consent.id === p.id) { C.consentRespond(R.consent, from, p.allow); evalConsent(); } break;
+    case 'recstop': if (R.rec && R.rec.id === p.id) stopRecording('Stopped by ' + peer.name); break;
+    case 'recstatus': if (p.state === 'recording') R.remoteRec[from] = { name: peer.name, id: p.id }; else delete R.remoteRec[from]; renderRecBanner(); break;
+    case 'connect': askConnect(p.card, from); break;
+    case 'connectresp': if (p.accept && p.card.uid && R.pendingConnect && R.pendingConnect[p.card.uid]) { friends[p.card.uid] = { card: p.card, since: new Date().toISOString() }; store.set('omt2-friends', friends); toast('🤝 ' + p.card.name + ' accepted — you are connected'); } else if (!p.accept) toast('Connect request was not accepted'); break;
+    case 'thanks': inbox.unshift({ from: peer.name, uid: peer.uid, e: p.e, text: p.text, at: new Date().toISOString(), room: R.cfg.room }); inbox = inbox.slice(0, 100); store.set('omt2-inbox', inbox); floatEmoji(p.e || '💛', peer.name); toast((p.e || '💛') + ' ' + peer.name + ' sent you encouragement'); break;
+    case 'end': if (!R.ended) { toast('The host ended the session'); finishSession('ended-by-host'); } break;
+  }
+}
+function onPresence(newId) {
+  if (!R) return; const ids = Array.from(R.peers.keys());
+  if (R.consent && R.consent.state !== 'ended') { C.consentPresence(R.consent, ids); if (R.rec && C.consentStatus(R.consent) === 'needs-reconsent') stopRecording('Someone joined — recording stopped. Ask again so everyone can agree.'); else evalConsent(); }
+  if (R.isHost && R.turn.on) { /* order is host-managed; no auto change */ }
+}
+function sendState(toId) { sendMsg('state', { prompt: R.promptParams, timer: { left: timerLeft(), running: R.timer.running }, turn: R.turn, verse: R.verse, tab: R.tab }, toId); }
+function applyState(s) {
+  if (s.prompt) setPromptFromParams(s.prompt, false, true); if (s.timer) { R.timer.total = R.timer.total || (R.prompt ? R.prompt.seconds : 0); timerApply(s.timer.running ? 'start' : 'pause', s.timer.left); }
+  if (s.turn) R.turn = s.turn; if (s.verse && s.verse.lines) { R.verse = Object.assign(C.newVerse(s.verse.id, s.verse.title), { lines: s.verse.lines.slice() }); }
+  renderTabBody();
+}
+
+/* ---------- tabs ---------- */
+function renderTabs() { const t = clear($('tabs')); TABS.forEach(([id, label]) => t.append(h('button', { class: R.tab === id ? 'active' : '', 'data-tab': id, onclick: () => { switchTab(id); } }, label))); renderTabBody(); }
+function switchTab(id) { if (!TABS.some(t => t[0] === id)) return; R.tab = id; document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === id)); renderTabBody(); }
+function renderTabBody(keepFocus) {
+  if (!R) return; const act = document.activeElement; if (keepFocus && act && act.closest && act.closest('#tabbody') && act.tagName === 'INPUT') return;
+  const b = clear($('tabbody'));
+  ({ prompt: tabPrompt, studio: tabStudio, record: tabRecord, people: tabPeople, notes: tabNotes })[R.tab](b);
+}
+$('mobseg').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; $('roomgrid').dataset.view = b.dataset.v; document.querySelectorAll('#mobseg button').forEach(x => x.classList.toggle('active', x === b)); });
+
+/* ---------- prompt engine UI, timer, turns ---------- */
+function setPromptFromParams(params, broadcast, quiet) {
+  params = Object.assign({}, R.promptParams, params); const P = C.generatePrompt(params); params.seconds = P.seconds; params.seed = P.seed; R.promptParams = params; R.prompt = P;
+  if (!R.promptLog.some(x => x.id === P.id && x.seed === P.seed)) R.promptLog.push(P);
+  timerReset(P.seconds); if (broadcast && R.isHost) sendMsg('prompt', { prompt: params });
+  if (!quiet && !R.isHost) { toast('New prompt: ' + P.title); }
+  if (R.tab === 'prompt') renderTabBody();
+}
+function newPrompt(overrides) { const o = Object.assign({}, R.promptParams, { seed: C.newSeed() }, overrides || {}); setPromptFromParams(o, true); }
+function promptCode(p) { return [p.type, p.seed, p.difficulty, p.theme || '-', p.seconds].join(':'); }
+function parseCode(s) { const a = String(s).trim().split(':'); if (a.length < 2) return null; return { type: a[0], seed: a[1], difficulty: a[2] || 'medium', theme: a[3] && a[3] !== '-' ? a[3] : '', seconds: parseInt(a[4], 10) || 0 }; }
+function visualSvg(P) {
+  const ns = 'http://www.w3.org/2000/svg', v = P.visual, s = document.createElementNS(ns, 'svg'); s.setAttribute('viewBox', '0 0 100 75'); s.setAttribute('class', 'vis'); s.setAttribute('role', 'img'); s.setAttribute('aria-label', 'Visual prompt: ' + v.names.join(', '));
+  const mk = (t, a, txt) => { const e = document.createElementNS(ns, t); for (const k in a) e.setAttribute(k, a[k]); if (txt) e.textContent = txt; s.append(e); return e; };
+  const g = mk('defs', {}); const lg = document.createElementNS(ns, 'linearGradient'); lg.setAttribute('id', 'vg' + P.seed); lg.setAttribute('x1', '0'); lg.setAttribute('y1', '0'); lg.setAttribute('x2', '1'); lg.setAttribute('y2', '1');
+  [[0, v.bg[0]], [1, v.bg[0]]].forEach(([o, c]) => { const st = document.createElementNS(ns, 'stop'); st.setAttribute('offset', o); st.setAttribute('stop-color', c); lg.append(st); }); g.append(lg);
+  mk('rect', { width: 100, height: 75, fill: v.bg[0] });
+  v.shapes.forEach(sh => { if (sh.k === 'circle') mk('circle', { cx: sh.x, cy: sh.y * .75, r: sh.s / 2, fill: v.bg[1], opacity: sh.o }); else if (sh.k === 'rect') mk('rect', { x: sh.x, y: sh.y * .75, width: sh.s, height: sh.s * .7, fill: v.bg[1], opacity: sh.o }); else mk('polygon', { points: sh.x + ',' + (sh.y * .75) + ' ' + (sh.x + sh.s) + ',' + (sh.y * .75) + ' ' + (sh.x + sh.s / 2) + ',' + (sh.y * .75 - sh.s), fill: v.bg[1], opacity: sh.o }); });
+  v.items.forEach(i => mk('text', { x: i.x, y: i.y * .75, 'font-size': i.s / 4, 'text-anchor': 'middle', transform: 'rotate(' + i.rot + ' ' + i.x + ' ' + (i.y * .75) + ')' }, i.e)); return s;
+}
+function timerLeft() { const t = R.timer; return t.running ? Math.max(0, Math.round((t.endAt - Date.now()) / 1000)) : t.left; }
+function timerReset(sec) { const t = R.timer; clearInterval(t.iv); t.iv = null; t.running = false; t.total = sec; t.left = sec; paintTimer(); }
+function timerApply(action, seconds) {
+  const t = R.timer; if (action === 'start') { if (t.running) { clearInterval(t.iv); } const s = seconds && seconds > 0 ? seconds : (t.left || t.total); t.left = s; t.running = true; t.endAt = Date.now() + s * 1000; clearInterval(t.iv); t.iv = setInterval(() => { if (!R) return clearInterval(t.iv); if (timerLeft() <= 0) { t.running = false; t.left = 0; clearInterval(t.iv); t.iv = null; beep(); if (R.tab === 'prompt') paintTimer(); } else paintTimer(); }, 250); }
+  else if (action === 'pause') { t.left = timerLeft(); t.running = false; clearInterval(t.iv); t.iv = null; if (seconds) t.left = Math.min(t.left, seconds) || t.left; }
+  else if (action === 'reset') { timerReset(t.total || (R.prompt && R.prompt.seconds) || 60); }
+  paintTimer();
+}
+function timerCmd(action) { const secs = action === 'start' ? (R.timer.left || R.timer.total) : (action === 'pause' ? timerLeft() : R.timer.total); timerApply(action, Math.max(5, secs || 60)); if (R.isHost) sendMsg('timer', { action, seconds: Math.max(5, secs || 60) }); }
+function paintTimer() { const el = $('ringText'), ring = $('ringArc'); if (!el) return; const left = timerLeft(), tot = R.timer.total || 1; el.textContent = String(Math.floor(left / 60)).padStart(2, '0') + ':' + String(left % 60).padStart(2, '0'); ring.setAttribute('stroke-dashoffset', String(251 * (1 - left / tot))); ring.setAttribute('stroke', left <= 5 && R.timer.running ? '#e89a9a' : '#9de3c3'); }
+let _ac = null; function beep() { try { _ac = _ac || new (window.AudioContext || window.webkitAudioContext)(); const o = _ac.createOscillator(), g = _ac.createGain(); o.frequency.value = 880; g.gain.value = .15; o.connect(g); g.connect(_ac.destination); o.start(); o.stop(_ac.currentTime + .25); } catch (e) { } }
+function ring() { const ns = 'http://www.w3.org/2000/svg'; const s = document.createElementNS(ns, 'svg'); s.setAttribute('class', 'ring'); s.setAttribute('viewBox', '0 0 100 100'); s.innerHTML = '<circle cx="50" cy="50" r="40" fill="none" stroke="#243246" stroke-width="9"/><circle id="ringArc" cx="50" cy="50" r="40" fill="none" stroke="#9de3c3" stroke-width="9" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="0" transform="rotate(-90 50 50)"/><text id="ringText" x="50" y="58" text-anchor="middle">00:00</text>'; return s; }
+function tabPrompt(b) {
+  const P = R.localPrompt || R.prompt, ctl = R.isHost, cat = catOf(R.cfg.cat), pp = R.promptParams;
+  if (ctl) {
+    const type = h('select', { id: 'pType', 'aria-label': 'Prompt type' }, h('optgroup', { label: 'Suggested for this class' }, cat.types.map(t => h('option', { value: t, selected: t === pp.type }, C.typeInfo(t).label))), h('optgroup', { label: 'All prompt types' }, C.PROMPT_TYPES.map(t => h('option', { value: t.id, selected: t.id === pp.type && !cat.types.includes(t.id) }, t.label))));
+    const dif = h('select', { id: 'pDiff' }, ['easy', 'medium', 'hard'].map(d => h('option', { value: d, selected: d === pp.difficulty }, d))), th = h('select', { id: 'pTheme' }, h('option', { value: '' }, 'Any theme'), C.THEME_IDS.map(t => h('option', { value: t, selected: t === pp.theme }, t)));
+    const secs = h('input', { id: 'pSecs', type: 'number', min: '5', max: '600', value: String(pp.seconds || (P && P.seconds) || 60), 'aria-label': 'Seconds' });
+    const gen = () => newPrompt({ type: type.value, difficulty: dif.value, theme: th.value, seconds: parseInt(secs.value, 10) || 0 });
+    type.onchange = () => { secs.value = C.typeInfo(type.value).secs; }; 
+    b.append(h('div', { class: 'grid3' }, h('div', null, h('label', null, 'Type'), type), h('div', null, h('label', null, 'Difficulty'), dif), h('div', null, h('label', null, 'Theme'), th)),
+      h('div', { class: 'row', style: 'margin:8px 0' }, h('div', { style: 'width:110px' }, h('label', null, 'Seconds'), secs), h('button', { class: 'primary', id: 'newPrompt', onclick: gen }, '🎲 New prompt'), h('button', { class: 'ghost', onclick: () => newPrompt({ type: type.value, difficulty: dif.value, theme: th.value }) }, 'Shuffle')));
+  } else { b.append(h('div', { class: 'small muted' }, R.cfg.hostName ? R.cfg.hostName + ' (host) chooses the prompt for the room.' : 'The host chooses the prompt for the room.')); }
+  if (!P) { b.append(h('p', { class: 'muted' }, ctl ? 'Press “New prompt” to start.' : 'Waiting for the host’s first prompt…')); }
+  else {
+    b.append(h('div', { class: 'ringwrap', style: 'margin-top:8px' }, ring(), h('div', null, h('span', { class: 'tag' }, P.title), h('span', { class: 'tag' }, P.difficulty), P.theme ? h('span', { class: 'tag' }, P.theme) : null)));
+    b.append(h('div', { class: 'bigprompt', id: 'promptText', 'aria-live': 'polite' }, P.visual ? 'What do you see?' : P.text));
+    if (P.visual) b.append(visualSvg(P));
+    if (P.items.length > 1) b.append(h('div', { class: 'chips' }, P.items.map(i => h('span', { class: 'chip' }, i))));
+    if (P.type === 'perspectives') b.append(h('div', { class: 'sides' }, P.items.map((s, i) => h('div', { class: 'side2' }, h('b', null, 'Side ' + (i + 1)), h('div', null, s)))));
+    if (P.rhymes && P.rhymes.length) b.append(h('div', { class: 'small muted', style: 'margin-top:6px' }, 'Rhymes (optional): ' + P.rhymes.join(', ')));
+    b.append(h('p', { class: 'muted', style: 'margin:8px 0' }, P.hint));
+    b.append(h('div', { class: 'row' }, ctl ? [h('button', { id: 'tStart', onclick: () => timerCmd('start') }, '▶ Start'), h('button', { onclick: () => timerCmd('pause') }, 'Ⅱ Pause'), h('button', { class: 'ghost', onclick: () => timerCmd('reset') }, '↺ Reset')] : null,
+      h('button', { id: 'doneBtn', onclick: () => donePrompt(P) }, '✓ I did this'), h('button', { class: 'ghost', onclick: async () => toast(await copyText(promptCode(P)) ? 'Prompt code copied' : promptCode(P)) }, 'Copy prompt code')));
+  }
+  if (!ctl) b.append(h('details', { class: 'adv' }, h('summary', null, 'Use a prompt code (if the host shares one)'), h('div', { class: 'row' }, h('input', { id: 'codeIn', placeholder: 'word:ab12cd:medium:-:60', style: 'flex:1' }), h('button', { onclick: () => { const p = parseCode($('codeIn').value); if (!p) return toast('Not a prompt code', true); R.localPrompt = C.generatePrompt(p); timerReset(R.localPrompt.seconds); renderTabBody(); } }, 'Show'))));
+  if (R.isHost && !R.solo) b.append(turnPanel()); else if (R.turn.on) b.append(turnPanel());
+  setTimeout(paintTimer, 0);
+}
+function donePrompt(P) { const t = P.type === 'freestyle' ? 'freestyle_done' : (['exchange'].includes(R.cfg.cat) ? 'language_practice' : 'prompt_done'); const r = award(t, { ref: P.id }); toast(r.gained ? '+' + r.gained + ' Points' : 'Nice — daily Points for this are used up, keep going for the practice.'); }
+function turnPanel() {
+  const t = R.turn, box = h('div', { class: 'card', style: 'margin:12px 0 0;padding:12px' }, h('b', null, '🎙 Speaking turns'));
+  if (t.on && t.order.length) { const cur = t.order[t.index % t.order.length], nxt = t.order[(t.index + 1) % t.order.length]; box.append(h('div', { class: 'bigprompt', style: 'font-size:22px' }, (cur.id === profile.uid ? '👉 Your turn!' : '🎙 ' + cur.name)), h('div', { class: 'small muted' }, 'Up next: ' + nxt.name)); }
+  else box.append(h('div', { class: 'small muted' }, R.isHost ? 'Off. Turn it on to give everyone a turn in order.' : 'Not in use.'));
+  if (R.isHost) box.append(h('div', { class: 'row', style: 'margin-top:6px' }, h('button', { id: 'turnToggle', onclick: () => { if (t.on) R.turn = { order: [], index: 0, on: false }; else { R.turn = { order: [{ id: profile.uid, name: myName() }].concat(Array.from(R.peers.values()).filter(p => p.uid && !R.blocked.has(p.uid)).map(p => ({ id: p.uid, name: p.name }))), index: 0, on: true }; } sendMsg('turn', { turn: R.turn }); renderTabBody(); } }, t.on ? 'Stop turns' : 'Start turns'),
+    t.on ? h('button', { id: 'turnNext', class: 'primary', onclick: () => { R.turn.index = (R.turn.index + 1) % R.turn.order.length; sendMsg('turn', { turn: R.turn }); renderTabBody(); if (R.promptParams) timerCmd('reset'); } }, 'Next speaker ▶') : null));
+  return box;
+}
+
+/* ---------- reactions ---------- */
+function renderReacts() { const r = clear($('reacts')); REACTS.forEach(e => r.append(h('button', { 'aria-label': 'React ' + e, onclick: () => { if (!R) return; R.reactions++; floatEmoji(e, 'you'); sendMsg('react', { e }); } }, e))); }
+function floatEmoji(e, who) { const f = h('div', { class: 'float', style: 'left:' + (15 + Math.random() * 70) + 'vw' }, e, h('small', null, who || '')); document.body.append(f); setTimeout(() => f.remove(), 2300); }
+
+/* OMT Live v0.2 UI — part 3: verse studio, recorder + consent, people/host, notes, wrap-up/export, profile, init */
+const RHY_COLORS = ['#9de3c3', '#e6c78c', '#9db9f4', '#e89a9a', '#c9a8f0', '#8fd8e8'];
+function paintVerse() {
+  const box = $('verseList'); if (!box || !R) return; const act = document.activeElement; if (act && box.contains(act) && act.tagName === 'INPUT') return;
+  clear(box); const v = R.verse, groups = C.rhymeGroups(v.lines);
+  if (!v.lines.length) box.append(h('p', { class: 'muted small' }, 'No lines yet. Add the first line below — or pick a word and tap a rhyme.'));
+  v.lines.forEach((l, i) => {
+    if (i % 4 === 0) box.append(h('div', { class: 'barsep' }, 'Bar section ' + (i / 4 + 1)));
+    const inp = h('input', { value: l.text, maxlength: '200', 'aria-label': 'Line ' + (i + 1), 'data-line': l.id }); inp.addEventListener('change', () => { const op = { op: 'edit', id: l.id, text: inp.value }; C.applyVerseOp(R.verse, op); sendMsg('verseop', { op }); paintVerse(); verseProgress(); });
+    const g = groups[i];
+    box.append(h('div', { class: 'verseline' + (i === v.lines.length - 1 ? ' now' : '') }, h('div', { class: 'n' }, i % 4 + 1), h('div', null, inp, h('div', { class: 'by' }, (g >= 0 ? h('span', { class: 'rd', style: 'background:' + RHY_COLORS[g % RHY_COLORS.length] }) : null), C.lineSyllables(l.text) + ' syllables' + (l.by ? ' · ' + l.by : ''))),
+      h('div', { class: 'acts' }, h('button', { 'aria-label': 'Move up', onclick: () => verseOp({ op: 'move', id: l.id, dir: -1 }) }, '↑'), h('button', { 'aria-label': 'Move down', onclick: () => verseOp({ op: 'move', id: l.id, dir: 1 }) }, '↓')), h('button', { 'aria-label': 'Delete line', onclick: () => verseOp({ op: 'del', id: l.id }) }, '✕')));
+  });
+  const bars = C.completedBars(v); const s = $('verseStat'); if (s) s.textContent = bars + ' complete four-bar section' + (bars === 1 ? '' : 's') + (C.isCollab(v) ? ' · collaborative ✨' : '');
+}
+function verseOp(op) { C.applyVerseOp(R.verse, op); sendMsg('verseop', { op }); paintVerse(); }
+function addLine(text) { text = String(text || '').trim(); if (!text) return; const op = { op: 'add', id: C.randId('l_', 6), text, by: myName(), byUid: profile.uid, at: new Date().toISOString() }; C.applyVerseOp(R.verse, op); sendMsg('verseop', { op }); award('line_added', { ref: R.verse.id }); verseProgress(); paintVerse(); }
+function verseProgress() {
+  const v = R.verse, bars = C.completedBars(v); if (bars >= 1 && !R.verseAwarded[v.id + 'v']) { R.verseAwarded[v.id + 'v'] = 1; award('verse_done', { ref: v.id }); }
+  if (bars >= 1 && C.isCollab(v) && !R.verseAwarded[v.id + 'c']) { R.verseAwarded[v.id + 'c'] = 1; award('collab_verse', { ref: v.id }); } const s = $('verseStat'); if (s) paintVerse();
+}
+function beatToggle(bpm) {
+  if (R.beat) { clearInterval(R.beat); R.beat = null; return false; }
+  let n = 0; R.beat = setInterval(() => { try { _ac = _ac || new (window.AudioContext || window.webkitAudioContext)(); const o = _ac.createOscillator(), g = _ac.createGain(); o.frequency.value = n % 4 === 0 ? 1200 : 800; g.gain.value = .12; g.gain.exponentialRampToValueAtTime(.001, _ac.currentTime + .08); o.connect(g); g.connect(_ac.destination); o.start(); o.stop(_ac.currentTime + .09); } catch (e) { } n++; }, 60000 / bpm); return true;
+}
+function tabStudio(b) {
+  const cat = catOf(R.cfg.cat), lineIn = h('input', { id: 'lineIn', maxlength: '200', placeholder: 'Write a line…', style: 'flex:1;min-width:160px' }), word = h('input', { id: 'sWord', placeholder: 'Start with a word', maxlength: '30', value: R.helper ? R.helper.word : '' });
+  const res = h('div', { class: 'chips', id: 'helperRes', style: 'margin-top:6px' });
+  const fill = () => { clear(res); if (!R.helper) return; put(res, [h('span', { class: 'small muted' }, 'Rhymes:'), R.helper.rhymes.map(w => chip(w)), h('span', { class: 'small muted', style: 'margin-left:6px' }, 'Related:'), R.helper.assoc.map(w => chip(w))]); };
+  const chip = w => h('button', { class: 'chip', onclick: () => { lineIn.value = (lineIn.value ? lineIn.value + ' ' : '') + w; lineIn.focus(); } }, w);
+  const go = () => { const w = word.value.trim().toLowerCase(); if (!w) return; R.helper = { word: w, rhymes: C.rhymesFor(w, 10), assoc: C.associate(w, R.promptParams.theme, 8, w) }; fill(); }; fill();
+  const bpm = h('input', { id: 'bpm', type: 'number', min: '50', max: '160', value: '90', style: 'width:80px' });
+  b.append(h('div', { class: 'small muted' }, 'Build a verse line by line. Everyone in the room can add and edit; lines that rhyme share a colour dot.'),
+    R.prompt ? h('div', { class: 'callout', style: 'margin:8px 0' }, 'Prompt: ' + (R.prompt.visual ? 'visual — ' + R.prompt.visual.names.join(' ') : R.prompt.text)) : null,
+    h('div', { class: 'row', style: 'margin:8px 0' }, word, h('button', { id: 'helperGo', onclick: go }, 'Words & rhymes')), res,
+    h('div', { class: 'row', style: 'margin:8px 0' }, h('label', { style: 'margin:0' }, 'Beat'), bpm, h('button', { id: 'beatBtn', onclick: e => { const on = beatToggle(Math.max(50, Math.min(160, +bpm.value || 90))); e.target.textContent = on ? '■ Stop beat' : '▶ Beat'; } }, R.beat ? '■ Stop beat' : '▶ Beat'), h('span', { class: 'small muted' }, 'A steady click to practise timing.')),
+    h('input', { id: 'verseTitle', placeholder: 'Verse title (optional)', maxlength: '80', value: R.verse.title, onchange: e => { R.verse.title = e.target.value; } }),
+    h('div', { id: 'verseList', style: 'margin:8px 0' }), h('div', { class: 'row' }, lineIn, h('button', { class: 'primary', id: 'addLine', onclick: () => { addLine(lineIn.value); lineIn.value = ''; lineIn.focus(); } }, 'Add line')),
+    h('div', { class: 'row between', style: 'margin-top:10px' }, h('span', { class: 'small muted', id: 'verseStat' }),
+      h('div', { class: 'row' }, h('button', { id: 'saveVerse', onclick: () => { if (!C.completedBars(R.verse) && !R.verse.lines.length) return toast('Write a line first', true); const list = store.get('omt2-verses', []); list.unshift({ id: R.verse.id, title: R.verse.title, lines: R.verse.lines, savedAt: new Date().toISOString(), room: R.cfg.room }); store.set('omt2-verses', list.slice(0, 100)); toast('Verse saved on this device. It is also included when you export the session.'); } }, 'Save verse'),
+        R.isHost ? h('button', { class: 'ghost', onclick: () => { if (R.verse.lines.length) R.verses.push(R.verse); R.verse = C.newVerse(); sendMsg('state', { prompt: R.promptParams, timer: { left: timerLeft(), running: R.timer.running }, turn: R.turn, verse: R.verse, tab: R.tab }); renderTabBody(); } }, 'New verse') : null)));
+  paintVerse(); if (cat.studio === false && !R.verse.lines.length) { /* studio still available in every class */ }
+}
+
+/* ---------- recorder with consent (own microphone only; takes stay on this device) ---------- */
+const DB = {
+  open() { return new Promise((res, rej) => { try { const r = indexedDB.open('omt2', 1); r.onupgradeneeded = () => r.result.createObjectStore('takes', { keyPath: 'id' }); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); } }); },
+  async all() { const db = await this.open(); return new Promise((res, rej) => { const q = db.transaction('takes').objectStore('takes').getAll(); q.onsuccess = () => res(q.result.sort((a, b) => b.created.localeCompare(a.created))); q.onerror = () => rej(q.error); }); },
+  async put(t) { const db = await this.open(); return new Promise((res, rej) => { const tx = db.transaction('takes', 'readwrite'); tx.objectStore('takes').put(t); tx.oncomplete = res; tx.onerror = () => rej(tx.error); }); },
+  async del(id) { const db = await this.open(); return new Promise((res, rej) => { const tx = db.transaction('takes', 'readwrite'); tx.objectStore('takes').delete(id); tx.oncomplete = res; tx.onerror = () => rej(tx.error); }); }
+};
+function renderRecBanner() {
+  const b = clear($('recbanner')); const items = [];
+  if (R && R.rec) items.push(h('span', null, '● RECORDING your microphone — everyone in the room agreed'), h('button', { id: 'bannerStop', onclick: () => stopRecording('Recording stopped') }, 'Stop now'));
+  if (R) Object.keys(R.remoteRec).forEach(id => items.push(h('span', null, '● ' + R.remoteRec[id].name + ' is recording their own microphone'), h('button', { onclick: () => sendMsg('recstop', { id: R.remoteRec[id].id }) }, 'Ask to stop')));
+  put(b, items); b.classList.toggle('hidden', !items.length);
+}
+function askConsentModal(p, from, peer) {
+  const answer = allow => { sendMsg('recresp', { id: p.id, allow }, from); }; let done = false;
+  modal('Recording request', h('div', null, h('p', null, h('b', null, peer.name), ' wants to record their own microphone during this session.'), h('p', { class: 'small muted' }, 'OMT only records the requester’s microphone, saved on their device. If you speak near their microphone, your voice may be heard in the recording. Everyone in the room must agree. You can ask them to stop at any time.')),
+    [{ label: 'Decline', onclick: () => { done = true; answer(false); } }, { label: 'Allow', primary: true, onclick: () => { done = true; answer(true); } }], { sticky: true, onclose: () => { if (!done) answer(false); } });
+}
+function startRecordFlow() {
+  if (R.rec || R.consent) return;
+  if (R.solo || R.peers.size === 0) return beginRecording(null);
+  const id = C.randId('rc_', 6); R.consent = C.consentStart({ id, by: 'me', byName: myName(), present: Array.from(R.peers.keys()) });
+  sendMsg('recreq', { id, name: myName() }); R.consentTimer = setTimeout(evalConsent, C.CONSENT_TIMEOUT_MS + 500); renderTabBody();
+}
+function evalConsent() {
+  if (!R || !R.consent) return; const st = C.consentStatus(R.consent), c = R.consent;
+  if (st === 'granted' && c.state === 'pending') return beginRecording(c);
+  if (st === 'declined') { const names = c.declined.map(id => (R.peers.get(id) || {}).name || 'Someone'); toast('Not recorded: ' + names.join(', ') + ' declined.', true); R.consent = null; clearTimeout(R.consentTimer); }
+  else if (st === 'expired') { toast('Not recorded: not everyone answered in time.', true); R.consent = null; clearTimeout(R.consentTimer); }
+  if (R.tab === 'record') renderTabBody();
+}
+async function beginRecording(consent) {
+  try {
+    if (!navigator.mediaDevices || !window.MediaRecorder) throw new Error('This browser cannot record audio here (needs HTTPS and a recent browser).');
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true }); const mime = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4'].find(t => MediaRecorder.isTypeSupported(t));
+    const mr = new MediaRecorder(stream, mime ? { mimeType: mime } : {}), chunks = [], id = consent ? consent.id : C.randId('rc_', 6), t0 = Date.now(), room = R.cfg, pr = R.prompt;
+    mr.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+    mr.onstop = async () => {
+      stream.getTracks().forEach(t => t.stop()); const blob = new Blob(chunks, { type: mr.mimeType || 'audio/webm' }); if (!blob.size) return;
+      const take = { id: 'tk_' + C.randId('', 8), name: 'Take ' + new Date().toLocaleTimeString(), created: new Date().toISOString(), seconds: Math.round((Date.now() - t0) / 1000), mime: blob.type, blob, room: room.room, cat: room.cat, prompt: pr ? (pr.visual ? 'Visual prompt: ' + pr.visual.names.join(' ') : pr.text) : '' };
+      try { await DB.put(take); award('take', { ref: take.id }); if (R) { R.takes++; if (R.tab === 'record') renderTabBody(); } toast('Take saved on this device'); } catch (e) { toast('Could not save the take: ' + e.message, true); }
+    };
+    R.rec = { id, mr, stream }; if (consent) C.consentActivate(consent); mr.start(); sendMsg('recstatus', { id, state: 'recording', name: myName() }); renderRecBanner(); if (R.tab === 'record') renderTabBody();
+  } catch (e) { toast('Recording not started: ' + e.message, true); if (R) R.consent = null; if (R && R.tab === 'record') renderTabBody(); }
+}
+function stopRecording(reason) {
+  if (!R || !R.rec) return; const rec = R.rec; R.rec = null; try { if (rec.mr.state !== 'inactive') rec.mr.stop(); } catch (e) { } try { rec.stream.getTracks().forEach(t => t.stop()); } catch (e) { }
+  if (R.consent) { R.consent.state = 'ended'; R.consent = null; } clearTimeout(R.consentTimer); sendMsg('recstatus', { id: rec.id, state: 'ended', name: myName() }); renderRecBanner(); if (reason) toast(reason); if (R.tab === 'record') renderTabBody();
+}
+function tabRecord(b) {
+  b.append(h('div', { class: 'callout' }, 'Recording is OFF by default. It records only your own microphone, and the file stays on this device (you can download or delete it). In a room with other people, everyone must agree first, and a red banner shows the whole time. Anyone can stop it.'));
+  const st = R.consent ? C.consentStatus(R.consent) : '';
+  b.append(h('div', { class: 'row', style: 'margin:10px 0' }, R.rec ? h('button', { class: 'primary', id: 'recStop', onclick: () => stopRecording('Recording stopped') }, '■ Stop recording') : h('button', { class: 'primary', id: 'recStart', disabled: !!R.consent, onclick: startRecordFlow }, '● Record my microphone')));
+  if (R.consent && st === 'pending') b.append(h('div', { class: 'notice', id: 'consentWait' }, 'Waiting for ' + R.consent.asked.filter(id => !R.consent.allowed.includes(id)).map(id => (R.peers.get(id) || {}).name || 'someone').join(', ') + ' to agree…', ' ', h('button', { onclick: () => { R.consent = null; clearTimeout(R.consentTimer); renderTabBody(); } }, 'Cancel')));
+  const list = h('div', { id: 'takeList' }, h('p', { class: 'muted small' }, 'Loading takes…')); b.append(h('h4', { style: 'margin:14px 0 4px' }, 'Your takes on this device'), list);
+  DB.all().then(ts => {
+    clear(list); if (!ts.length) return list.append(h('p', { class: 'muted small' }, 'No takes yet. Record a few attempts, then play them back to compare.'));
+    ts.forEach(t => { const url = URL.createObjectURL(t.blob); (R.urls = R.urls || []).push(url); const nm = h('input', { value: t.name, maxlength: '60', 'aria-label': 'Take name' }); nm.addEventListener('change', () => { t.name = nm.value; DB.put(t); });
+      list.append(h('div', { class: 'take' }, nm, h('div', { class: 'small muted' }, new Date(t.created).toLocaleString() + ' · ' + t.seconds + 's' + (t.prompt ? ' · ' + t.prompt : '')), h('audio', { controls: true, src: url, preload: 'metadata' }),
+        h('div', { class: 'row', style: 'margin-top:6px' }, h('a', { href: url, download: (t.name || 'take').replace(/[^\w-]+/g, '_') + (t.mime.includes('mp4') ? '.m4a' : '.webm') }, h('button', null, '⬇ Download')), h('button', { class: 'ghost', onclick: async () => { await DB.del(t.id); renderTabBody(); } }, 'Delete')))); });
+  }).catch(e => { clear(list); list.append(h('p', { class: 'small muted' }, 'Saved takes are unavailable in this browser mode (' + e.message + ').')); });
+}
+
+/* ---------- people, host controls, safety ---------- */
+function renderPeople() { if (!R) return; if (R.tab === 'people' || R.turn.on) { if (R.tab === 'people') renderTabBody(); } const n = R.peers.size + 1; if (!R.speaking) setStatus(R.solo ? '' : n + ' in the room'); }
+function reportModal(peer) {
+  const why = h('select', { id: 'rWhy' }, ['Harassment or hate', 'Sexual or inappropriate content', 'Someone who seems under 18', 'Spam or disruption', 'Other'].map(x => h('option', null, x))), note = h('textarea', { id: 'rNote', maxlength: '400', placeholder: 'What happened? (optional)' });
+  modal('Report ' + peer.name, h('div', null, h('p', { class: 'small muted' }, 'OMT has no moderation team yet. Your report is saved on this device only. You can copy it to send to the host, and the host can remove people from the room. Blocking hides their messages immediately.'), h('div', { class: 'field' }, why), h('div', { class: 'field' }, note)),
+    [{ label: 'Cancel', ghost: true }, { label: 'Save report', primary: true, onclick: () => { reports.unshift({ uid: peer.uid, name: peer.name, reason: why.value, note: note.value, room: R.cfg.room, at: new Date().toISOString() }); store.set('omt2-reports', reports); blockUser(peer, true); toast('Report saved and person blocked'); } }]);
+}
+function blockUser(peer, quiet) { if (!peer.uid) return toast('Cannot block yet — they have not introduced themselves.', true); blocked[peer.uid] = { name: peer.name, at: new Date().toISOString() }; store.set('omt2-blocked', blocked); R.blocked.add(peer.uid); if (!quiet) toast(peer.name + ' blocked. Their messages are hidden; you may still hear them in the video — the host can remove them.'); renderTabBody(); }
+function askConnect(card, from) {
+  if (friends[card.uid]) { sendMsg('connectresp', { accept: true, card: myCard() }, from); return; } let done = false;
+  modal('Connect request', h('p', null, h('b', null, card.avatar + ' ' + card.name), ' would like to connect. Accepting shares your name and avatar with them.'), [{ label: 'Not now', onclick: () => { done = true; sendMsg('connectresp', { accept: false, card: myCard() }, from); } }, { label: 'Accept', primary: true, onclick: () => { done = true; friends[card.uid] = { card, since: new Date().toISOString() }; store.set('omt2-friends', friends); sendMsg('connectresp', { accept: true, card: myCard() }, from); toast('🤝 Connected with ' + card.name); } }], { sticky: true });
+}
+function peerRow(p, me) {
+  const row = h('div', { class: 'peer' + (R.speaking === p.id ? ' speaking' : '') }, h('span', { class: 'av' }, p.avatar || '🙂'), h('div', { class: 'grow' }, h('b', null, p.name + (me ? ' (you)' : '')), p.host || (me && R.isHost) ? h('span', { class: 'badge host' }, 'host') : null, p.claimsHost && !p.host && !me ? h('span', { class: 'badge' }, 'claims host') : null, R.blocked.has(p.uid) ? h('span', { class: 'badge' }, 'blocked') : null, p.bio ? h('div', { class: 'small muted' }, p.bio) : null, p.langs ? h('div', { class: 'small muted' }, p.langs) : null));
+  if (me) return row;
+  if (R.codeOnly && !R.cfg.hp && p.claimsHost && p.hk) row.append(h('button', { onclick: () => { R.cfg.hp = p.hk; p.host = true; toast('Trusted ' + p.name + ' as host'); renderTabBody(); } }, 'Trust as host'));
+  if (R.blocked.has(p.uid)) { row.append(h('button', { onclick: () => { delete blocked[p.uid]; store.set('omt2-blocked', blocked); R.blocked.delete(p.uid); renderTabBody(); } }, 'Unblock')); }
+  else { ['💛', '👏', '🔥'].forEach(e => row.append(h('button', { 'aria-label': 'Send ' + e, onclick: () => { sendMsg('thanks', { e, text: '' }, p.id); award('appreciation', { ref: p.uid || p.id }); toast('Sent ' + e + ' to ' + p.name); } }, e)));
+    row.append(h('button', { 'data-act': 'connect', onclick: () => { if (!p.uid) return toast('Wait a moment — they have not introduced themselves yet.', true); R.pendingConnect = R.pendingConnect || {}; R.pendingConnect[p.uid] = true; sendMsg('connect', { card: myCard() }, p.id); toast('Connect request sent'); } }, friends[p.uid] ? '🤝 Connected' : 'Connect'), h('button', { onclick: () => blockUser(p) }, 'Block'), h('button', { onclick: () => reportModal(p) }, 'Report')); }
+  if (R.isHost) row.append(h('button', { 'data-act': 'kick', onclick: () => { try { R.api.executeCommand('kickParticipant', p.id); } catch (e) { } } }, 'Remove'));
+  return row;
+}
+function tabPeople(b) {
+  b.append(h('h4', { style: 'margin:0 0 6px' }, 'In this room (' + (R.peers.size + 1) + ')'), peerRow({ id: R.selfId, name: myName(), avatar: myCard().avatar, bio: myCard().bio, langs: myCard().langs, uid: profile.uid }, true));
+  R.peers.forEach(p => b.append(peerRow(p, false))); if (!R.peers.size) b.append(h('p', { class: 'muted small' }, R.solo ? 'Solo practice — nobody else is here.' : 'Nobody else yet. Share the invite link.'));
+  if (R.isHost && !R.solo) {
+    const hb = h('div', { class: 'card', style: 'margin:12px 0 0;padding:12px' }, h('b', null, 'Host controls'));
+    R.knocking.forEach(k => hb.append(h('div', { class: 'peer' }, h('span', { class: 'grow' }, '⏳ ' + k.name + ' is waiting'), h('button', { 'data-act': 'admit', onclick: () => { try { R.api.executeCommand('answerKnockingParticipant', k.id, true); } catch (e) { } R.knocking = R.knocking.filter(x => x.id !== k.id); renderTabBody(); } }, 'Admit'), h('button', { onclick: () => { try { R.api.executeCommand('answerKnockingParticipant', k.id, false); } catch (e) { } R.knocking = R.knocking.filter(x => x.id !== k.id); renderTabBody(); } }, 'Deny'))));
+    hb.append(h('div', { class: 'row', style: 'margin-top:6px' }, h('button', { id: 'muteAll', onclick: () => { try { R.api.executeCommand('muteEveryone', 'audio'); toast('Asked everyone to mute'); } catch (e) { } } }, '🔇 Mute everyone'), h('button', { id: 'lobbyBtn', onclick: () => { try { R.api.executeCommand('toggleLobby', true); toast('Waiting room on'); } catch (e) { } } }, '🚪 Waiting room on'), h('button', { id: 'bringAll', onclick: () => { sendMsg('tab', { tab: R.tab === 'people' ? 'prompt' : R.tab }); toast('Moved everyone to this tab'); } }, '📍 Bring everyone to my tab')), h('p', { class: 'small muted' }, 'Mute and remove use Jitsi’s moderator tools, so they work when Jitsi has made you the moderator.'));
+    b.append(hb);
+  }
+  if (!R.solo) b.append(h('div', { class: 'card', style: 'margin:12px 0 0;padding:12px' }, h('b', null, 'Invite'), h('div', { class: 'row', style: 'margin-top:6px' }, h('input', { readonly: true, value: inviteLink(), style: 'flex:1;min-width:180px', onfocus: e => e.target.select() }), h('button', { onclick: async () => toast(await copyText(inviteLink()) ? 'Copied' : 'Select and copy') }, 'Copy')), h('div', { class: 'small muted' }, 'Room code: ' + R.cfg.room)));
+}
+function tabNotes(b) {
+  const ta = h('textarea', { id: 'notesTa', placeholder: 'Phrases you liked, ideas, one thing to try next time…', style: 'min-height:140px' }, ''); ta.value = R.notes; ta.addEventListener('input', () => { R.notes = ta.value.slice(0, 4000); });
+  b.append(h('div', { class: 'small muted' }, 'Your notes are private. They go into the session summary you export.'), ta,
+    h('div', { class: 'row', style: 'margin:8px 0' }, h('button', { onclick: () => { if (!R.notes.trim()) return toast('Write something first', true); window.OMTApp.saveEntry('OMT session notes', (R.cfg.topic || catOf(R.cfg.cat).name), R.notes); toast('Saved to your Journal'); } }, 'Save to Journal')),
+    h('h4', { style: 'margin:12px 0 4px' }, 'Prompts so far (' + R.promptLog.length + ')'), R.promptLog.length ? h('ol', { class: 'small muted' }, R.promptLog.map(p => h('li', null, p.title + ' — ' + (p.visual ? p.visual.names.join(' ') : p.text)))) : h('p', { class: 'small muted' }, 'None yet.'));
+}
+
+/* ---------- wrap-up and export ---------- */
+function buildSummary() {
+  const ended = new Date().toISOString(), start = R.startedAt || ended, names = {}; Object.values(R.seen).concat(Array.from(R.peers.values())).forEach(p => { if (p && p.name && !R.blocked.has(p.uid)) names[p.uid || p.id] = p.name; });
+  return { id: R.sumId || (R.sumId = C.randId('session_', 10)), cat: R.cfg.cat, topic: R.cfg.topic, level: R.cfg.level, lang: R.cfg.lang, startedAt: start, endedAt: ended, durationMin: Math.max(1, Math.round((Date.parse(ended) - Date.parse(start)) / 60000)), participants: Array.from(new Set(Object.values(names))), hostName: R.cfg.hostName || (R.isHost ? myName() : ''), reactions: R.reactions, takes: R.takes, notes: R.notes,
+    prompts: R.promptLog.map(p => ({ title: p.title, type: p.type, text: p.text, items: p.items, seed: p.seed, difficulty: p.difficulty, theme: p.theme, seconds: p.seconds, hint: p.hint, visual: p.visual || undefined })), verses: R.verses.concat([R.verse]) };
+}
+function finishSession(kind) {
+  if (!R || R.ended) return; R.ended = true; if (kind === 'end' && R.isHost && !R.solo) sendMsg('end', { note: '' }); stopRecording(); clearInterval(R.beat); R.beat = null;
+  if (!R.started) { leaveCleanup(); showPage('home'); return; }
+  const sum = buildSummary(), people = Array.from(R.peers.values()).filter(p => p.uid && !R.blocked.has(p.uid));
+  const notes = h('textarea', { id: 'wrapNotes', placeholder: 'One thing you made or learned, and one thing to try next time…' }); notes.value = R.notes;
+  const keep = () => { R.notes = notes.value.slice(0, 4000); const s = buildSummary(); sessionsLog = sessionsLog.filter(x => x.id !== s.id); sessionsLog.unshift(s); store.set('omt2-sessions', sessionsLog.slice(0, 30)); return s; };
+  keep();
+  const body = h('div', null, h('p', null, sum.durationMin + ' min · ' + sum.prompts.length + ' prompt(s) · ' + sum.verses.filter(v => C.filledLines(v).length).length + ' verse(s) · ' + sum.takes + ' take(s) · ' + sum.reactions + ' reaction(s)'),
+    people.length ? h('div', null, h('b', null, 'Say something kind'), people.map(p => h('div', { class: 'peer' }, h('span', { class: 'grow' }, (p.avatar || '🙂') + ' ' + p.name), ['💛', '👏', '🔥'].map(e => h('button', { onclick: ev => { sendMsg('thanks', { e, text: '' }, p.id); award('appreciation', { ref: p.uid }); ev.target.textContent = '✓'; } }, e)), h('button', { onclick: ev => { R.pendingConnect = R.pendingConnect || {}; R.pendingConnect[p.uid] = true; sendMsg('connect', { card: myCard() }, p.id); ev.target.textContent = 'Request sent'; } }, friends[p.uid] ? '🤝 Connected' : 'Connect')))) : null,
+    h('div', { class: 'field' }, h('label', { for: 'wrapNotes' }, 'Your private notes (saved with the session)'), notes),
+    h('div', { class: 'row' }, h('button', { id: 'dlBundle', onclick: () => { const s = keep(); download('omt-session-' + s.id + '.library-bundle.json', JSON.stringify(C.buildBundle(C.buildSessionAssets(s)), null, 2)); } }, '⬇ Export for Library (.json)'),
+      h('button', { id: 'dlMd', onclick: () => { const s = keep(); download('omt-session-' + s.id + '.md', C.sessionMarkdown(s), 'text/markdown'); } }, '⬇ Summary (.md)'), h('button', { id: 'toJournal', onclick: () => { const s = keep(); window.OMTApp.saveEntry('OMT session', (s.topic || catOf(s.cat).name), C.sessionMarkdown(s)); toast('Saved to your Journal'); } }, '▧ Save to Journal')),
+    h('p', { class: 'small muted' }, 'The Library export keeps links between the session, its prompts and verses. Recordings are not included; download them from the Record tab if you want them.'));
+  modal('Session finished', body, [{ label: 'Done', primary: true, onclick: () => { keep(); } }], { sticky: true, onclose: () => { leaveCleanup(); showPage('home'); } });
+}
+function leaveCleanup() {
+  if (!R) return; try { if (R.api) R.api.dispose(); } catch (e) { } clearInterval(R.timer.iv); clearInterval(R.beat); clearTimeout(R.consentTimer); if (R.rec) { try { R.rec.mr.stop(); R.rec.stream.getTracks().forEach(t => t.stop()); } catch (e) { } }
+  (R.urls || []).forEach(u => URL.revokeObjectURL(u)); R = null; renderRecBanner(); clear($('meeting')); $('meeting').classList.add('hidden', 'empty'); clear($('prejoin')); clear($('vidctl')); $('roomLive').classList.add('hidden'); $('roomEmpty').classList.remove('hidden'); $('roomgrid').classList.remove('solo'); $('mobseg').style.display = '';
+}
+
+/* ---------- profile page ---------- */
+function renderProfile() {
+  const av = clear($('avatarPick')); AVATARS.forEach(a => av.append(h('button', { class: 'chip' + (profile.avatar === a ? ' on' : ''), 'aria-label': 'Avatar ' + a, onclick: () => { profile.avatar = a; renderProfile(); } }, a)));
+  const ip = clear($('interestPick')); INTERESTS.forEach(i => ip.append(h('button', { class: 'chip' + (profile.interests.includes(i) ? ' on' : ''), onclick: () => { profile.interests = profile.interests.includes(i) ? profile.interests.filter(x => x !== i) : profile.interests.concat(i); renderProfile(); } }, i)));
+  $('pfName').value = profile.name; $('pfLangs').value = profile.langs; $('pfBio').value = profile.bio; $('pfShare').value = profile.share;
+  const fl = clear($('friendList')); const fk = Object.keys(friends); if (!fk.length) fl.append(h('p', { class: 'muted small' }, 'No connections yet.')); fk.forEach(k => fl.append(h('div', { class: 'peer' }, h('span', { class: 'av' }, friends[k].card.avatar || '🙂'), h('span', { class: 'grow' }, friends[k].card.name + ' · since ' + friends[k].since.slice(0, 10)), h('button', { onclick: () => { delete friends[k]; store.set('omt2-friends', friends); renderProfile(); } }, 'Remove'))));
+  const il = clear($('inboxList')); if (!inbox.length) il.append(h('p', { class: 'muted small' }, 'Nothing yet.')); inbox.slice(0, 15).forEach(m => il.append(h('div', { class: 'small' }, m.e + ' from ' + m.from + ' · ' + new Date(m.at).toLocaleDateString())));
+  const bl = clear($('blockList')); const bk = Object.keys(blocked); if (!bk.length) bl.append(h('p', { class: 'muted small' }, 'Nobody blocked.')); bk.forEach(k => bl.append(h('div', { class: 'peer' }, h('span', { class: 'grow' }, blocked[k].name), h('button', { onclick: () => { delete blocked[k]; store.set('omt2-blocked', blocked); renderProfile(); } }, 'Unblock'))));
+  if (reports.length) bl.append(h('div', { style: 'margin-top:8px' }, h('button', { onclick: async () => toast(await copyText(JSON.stringify(reports, null, 2)) ? 'Reports copied' : 'Could not copy', false) }, 'Copy my saved reports (' + reports.length + ')')));
+}
+$('pfSave').addEventListener('click', () => { profile.name = $('pfName').value.trim().slice(0, 40); profile.langs = $('pfLangs').value.slice(0, 100); profile.bio = $('pfBio').value.slice(0, 200); profile.share = ['anon', 'card', 'full'].includes($('pfShare').value) ? $('pfShare').value : 'card'; store.set('omt2-profile', profile); $('pfMsg').textContent = 'Saved on this device.'; });
+
+/* ---------- init ---------- */
+window.addEventListener('beforeunload', () => { try { if (R && R.rec) R.rec.stream.getTracks().forEach(t => t.stop()); } catch (e) { } });
+window.OMTApp._state = () => R; updateBadge(); renderHome();
+if (/[#&]j=/.test(location.hash)) { const j = parseJoin(location.hash); if (j) showJoinBanner(j); }
+
+})();</script>
+</body></html>
